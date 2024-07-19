@@ -1,0 +1,52 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (1.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition
+-- Install configuration: ""
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//scripts
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//scripts/yolov8_ros2_pt.py
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//scripts/.gitignore
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//scripts/best.pt
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//scripts/yolov8n.pt
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//scripts/.gitattributes
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//scripts/yolov8_ros2_subscriber.py
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//scripts/.dockerignore
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//launch
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//launch/launch_yolov8.launch.py
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/lib/turtlebot3_recognition/yolov8_ros2_pt.py
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/lib/turtlebot3_recognition/yolov8_ros2_subscriber.py
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/lib/turtlebot3_recognition/launch_yolov8.launch.py
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/ament_index/resource_index/package_run_dependencies/turtlebot3_recognition
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/ament_index/resource_index/parent_prefix_path/turtlebot3_recognition
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/environment/ament_prefix_path.sh
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/environment/ament_prefix_path.dsv
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/environment/path.sh
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/environment/path.dsv
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/local_setup.bash
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/local_setup.sh
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/local_setup.zsh
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/local_setup.dsv
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/package.dsv
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/ament_index/resource_index/packages/turtlebot3_recognition
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/cmake/turtlebot3_recognitionConfig.cmake
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/cmake/turtlebot3_recognitionConfig-version.cmake
+-- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/package.xml

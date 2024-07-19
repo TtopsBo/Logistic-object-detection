@@ -1,0 +1,61 @@
+[0.058s] Invoking command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/src/turtlebot3/turtlebot3_description -DCMAKE_INSTALL_PREFIX=/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description
+[0.439s] -- The C compiler identification is GNU 11.4.0
+[0.441s] -- The CXX compiler identification is GNU 11.4.0
+[0.441s] -- Detecting C compiler ABI info
+[0.441s] -- Detecting C compiler ABI info - done
+[0.441s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.441s] -- Detecting C compile features
+[0.442s] -- Detecting C compile features - done
+[0.442s] -- Detecting CXX compiler ABI info
+[0.541s] -- Detecting CXX compiler ABI info - done
+[0.574s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.574s] -- Detecting CXX compile features
+[0.575s] -- Detecting CXX compile features - done
+[0.584s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.822s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+[1.005s] -- Found urdf: 2.6.0 (/opt/ros/humble/share/urdf/cmake)
+[1.265s] -- Configuring done (1.1s)
+[1.272s] -- Generating done (0.0s)
+[1.275s] -- Build files have been written to: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_description
+[1.317s] Invoked command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/src/turtlebot3/turtlebot3_description -DCMAKE_INSTALL_PREFIX=/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description
+[1.317s] Invoking command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --build /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_description -- -j12 -l12
+[1.533s] Invoked command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --build /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_description -- -j12 -l12
+[1.767s] Invoking command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --install /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_description
+[1.910s] -- Install configuration: ""
+[1.910s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/meshes
+[1.910s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/sensors
+[1.911s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/sensors/astra.jpg
+[1.911s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/sensors/lds.stl
+[1.912s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/sensors/r200.dae
+[1.913s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/sensors/astra.dae
+[1.932s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/sensors/r200.jpg
+[1.932s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/bases
+[1.932s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/bases/burger_base.stl
+[1.943s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/bases/waffle_base.stl
+[1.980s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/bases/waffle_pi_base.stl
+[1.998s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/wheels
+[1.998s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/wheels/right_tire.stl
+[2.000s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/meshes/wheels/left_tire.stl
+[2.003s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/rviz
+[2.003s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/rviz/model.rviz
+[2.004s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/urdf
+[2.004s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/urdf/turtlebot3_burger.urdf
+[2.004s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/urdf/turtlebot3_waffle_pi.urdf
+[2.004s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/urdf/turtlebot3_waffle.urdf
+[2.004s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/urdf/common_properties.urdf
+[2.005s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/ament_index/resource_index/package_run_dependencies/turtlebot3_description
+[2.006s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/ament_index/resource_index/parent_prefix_path/turtlebot3_description
+[2.006s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/environment/ament_prefix_path.sh
+[2.006s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/environment/ament_prefix_path.dsv
+[2.007s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/environment/path.sh
+[2.007s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/environment/path.dsv
+[2.007s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/local_setup.bash
+[2.007s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/local_setup.sh
+[2.007s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/local_setup.zsh
+[2.007s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/local_setup.dsv
+[2.008s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/package.dsv
+[2.008s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/ament_index/resource_index/packages/turtlebot3_description
+[2.008s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/cmake/turtlebot3_descriptionConfig.cmake
+[2.008s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/cmake/turtlebot3_descriptionConfig-version.cmake
+[2.009s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_description/share/turtlebot3_description/package.xml
+[2.034s] Invoked command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --install /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_description

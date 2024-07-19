@@ -1,0 +1,50 @@
+[0.039s] Invoking command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_navigation2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/src/turtlebot3/turtlebot3_navigation2 -DCMAKE_INSTALL_PREFIX=/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2
+[0.416s] -- The C compiler identification is GNU 11.4.0
+[0.416s] -- The CXX compiler identification is GNU 11.4.0
+[0.416s] -- Detecting C compiler ABI info
+[0.416s] -- Detecting C compiler ABI info - done
+[0.420s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.420s] -- Detecting C compile features
+[0.420s] -- Detecting C compile features - done
+[0.425s] -- Detecting CXX compiler ABI info
+[0.525s] -- Detecting CXX compiler ABI info - done
+[0.555s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.555s] -- Detecting CXX compile features
+[0.556s] -- Detecting CXX compile features - done
+[0.563s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.807s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+[1.063s] -- Configuring done (0.9s)
+[1.067s] -- Generating done (0.0s)
+[1.069s] -- Build files have been written to: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_navigation2
+[1.098s] Invoked command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_navigation2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/src/turtlebot3/turtlebot3_navigation2 -DCMAKE_INSTALL_PREFIX=/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2
+[1.098s] Invoking command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_navigation2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --build /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_navigation2 -- -j12 -l12
+[1.260s] Invoked command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_navigation2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --build /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_navigation2 -- -j12 -l12
+[1.729s] Invoking command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_navigation2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --install /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_navigation2
+[1.835s] -- Install configuration: ""
+[1.835s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/launch
+[1.836s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/launch/navigation2.launch.py
+[1.836s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/map
+[1.836s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/map/map.pgm
+[1.837s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/map/map.yaml
+[1.837s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param
+[1.837s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/waffle_pi.yaml
+[1.837s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/burger.yaml
+[1.840s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/waffle.yaml
+[1.840s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/rviz
+[1.840s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/rviz/tb3_navigation2.rviz
+[1.840s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/ament_index/resource_index/package_run_dependencies/turtlebot3_navigation2
+[1.840s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/ament_index/resource_index/parent_prefix_path/turtlebot3_navigation2
+[1.841s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/environment/ament_prefix_path.sh
+[1.841s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/environment/ament_prefix_path.dsv
+[1.841s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/environment/path.sh
+[1.841s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/environment/path.dsv
+[1.841s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/local_setup.bash
+[1.841s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/local_setup.sh
+[1.841s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/local_setup.zsh
+[1.841s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/local_setup.dsv
+[1.842s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/package.dsv
+[1.842s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/ament_index/resource_index/packages/turtlebot3_navigation2
+[1.842s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/cmake/turtlebot3_navigation2Config.cmake
+[1.842s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/cmake/turtlebot3_navigation2Config-version.cmake
+[1.842s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/package.xml
+[1.869s] Invoked command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_navigation2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --install /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_navigation2

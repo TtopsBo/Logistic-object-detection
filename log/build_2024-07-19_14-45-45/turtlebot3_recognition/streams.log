@@ -1,0 +1,58 @@
+[0.404s] Invoking command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/src/turtlebot3_recognition -DCMAKE_INSTALL_PREFIX=/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition
+[0.579s] -- The C compiler identification is GNU 11.4.0
+[0.663s] -- The CXX compiler identification is GNU 11.4.0
+[0.679s] -- Detecting C compiler ABI info
+[0.762s] -- Detecting C compiler ABI info - done
+[0.785s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.786s] -- Detecting C compile features
+[0.786s] -- Detecting C compile features - done
+[0.791s] -- Detecting CXX compiler ABI info
+[0.889s] -- Detecting CXX compiler ABI info - done
+[0.917s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.918s] -- Detecting CXX compile features
+[0.919s] -- Detecting CXX compile features - done
+[0.927s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.159s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+[1.416s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.680s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.685s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.688s] -- Added test 'lint_cmake' to check CMake code style
+[1.690s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.695s] -- Added test 'xmllint' to check XML markup files
+[1.700s] -- Configuring done (1.2s)
+[1.707s] -- Generating done (0.0s)
+[1.709s] -- Build files have been written to: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition
+[1.746s] Invoked command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/src/turtlebot3_recognition -DCMAKE_INSTALL_PREFIX=/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition
+[1.747s] Invoking command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --build /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition -- -j12 -l12
+[1.931s] Invoked command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --build /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition -- -j12 -l12
+[2.079s] Invoking command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --install /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition
+[2.177s] -- Install configuration: ""
+[2.177s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//scripts
+[2.177s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//scripts/yolov8_ros2_pt.py
+[2.177s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//scripts/.gitignore
+[2.177s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//scripts/best.pt
+[2.189s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//scripts/yolov8n.pt
+[2.200s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//scripts/.gitattributes
+[2.200s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//scripts/yolov8_ros2_subscriber.py
+[2.200s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//scripts/.dockerignore
+[2.200s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//launch
+[2.200s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition//launch/launch_yolov8.launch.py
+[2.201s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/lib/turtlebot3_recognition/yolov8_ros2_pt.py
+[2.201s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/lib/turtlebot3_recognition/yolov8_ros2_subscriber.py
+[2.201s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/lib/turtlebot3_recognition/launch_yolov8.launch.py
+[2.201s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/ament_index/resource_index/package_run_dependencies/turtlebot3_recognition
+[2.201s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/ament_index/resource_index/parent_prefix_path/turtlebot3_recognition
+[2.202s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/environment/ament_prefix_path.sh
+[2.202s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/environment/ament_prefix_path.dsv
+[2.202s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/environment/path.sh
+[2.202s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/environment/path.dsv
+[2.203s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/local_setup.bash
+[2.203s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/local_setup.sh
+[2.203s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/local_setup.zsh
+[2.203s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/local_setup.dsv
+[2.204s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/package.dsv
+[2.204s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/ament_index/resource_index/packages/turtlebot3_recognition
+[2.204s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/cmake/turtlebot3_recognitionConfig.cmake
+[2.204s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/cmake/turtlebot3_recognitionConfig-version.cmake
+[2.204s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_recognition/share/turtlebot3_recognition/package.xml
+[2.225s] Invoked command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --install /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition

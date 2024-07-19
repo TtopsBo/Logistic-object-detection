@@ -1,0 +1,9 @@
+/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition/CMakeFiles/uninstall.dir
+/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition/CMakeFiles/turtlebot3_recognition_uninstall.dir
+/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition/CMakeFiles/test.dir
+/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition/CMakeFiles/edit_cache.dir
+/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition/CMakeFiles/rebuild_cache.dir
+/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition/CMakeFiles/list_install_components.dir
+/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition/CMakeFiles/install.dir
+/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition/CMakeFiles/install/local.dir
+/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition/CMakeFiles/install/strip.dir

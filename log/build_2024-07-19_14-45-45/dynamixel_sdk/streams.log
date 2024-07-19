@@ -1,0 +1,70 @@
+[0.066s] Invoking command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/dynamixel_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/src/DynamixelSDK/dynamixel_sdk -DCMAKE_INSTALL_PREFIX=/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk
+[0.447s] -- The C compiler identification is GNU 11.4.0
+[0.448s] -- The CXX compiler identification is GNU 11.4.0
+[0.448s] -- Detecting C compiler ABI info
+[0.448s] -- Detecting C compiler ABI info - done
+[0.468s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.468s] -- Detecting C compile features
+[0.469s] -- Detecting C compile features - done
+[0.476s] -- Detecting CXX compiler ABI info
+[0.584s] -- Detecting CXX compiler ABI info - done
+[0.619s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.620s] -- Detecting CXX compile features
+[0.621s] -- Detecting CXX compile features - done
+[0.631s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.850s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+[1.114s] -- Configuring done (0.9s)
+[1.124s] -- Generating done (0.0s)
+[1.125s] -- Build files have been written to: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/dynamixel_sdk
+[1.156s] Invoked command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/dynamixel_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/src/DynamixelSDK/dynamixel_sdk -DCMAKE_INSTALL_PREFIX=/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk
+[1.157s] Invoking command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/dynamixel_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --build /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/dynamixel_sdk -- -j12 -l12
+[1.317s] [ 20%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.o[0m
+[1.318s] [ 20%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.o[0m
+[1.318s] [ 30%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.o[0m
+[1.319s] [ 40%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.o[0m
+[1.321s] [ 50%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.o[0m
+[1.324s] [ 60%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.o[0m
+[1.324s] [ 70%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.o[0m
+[1.371s] [ 80%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.o[0m
+[1.394s] [ 90%] [32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.o[0m
+[2.058s] [100%] [32m[1mLinking CXX shared library libdynamixel_sdk.so[0m
+[2.193s] [100%] Built target dynamixel_sdk
+[2.217s] Invoked command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/dynamixel_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --build /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/dynamixel_sdk -- -j12 -l12
+[2.385s] Invoking command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/dynamixel_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --install /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/dynamixel_sdk
+[2.480s] -- Install configuration: ""
+[2.480s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/include/
+[2.480s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/include//dynamixel_sdk
+[2.480s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol2_packet_handler.h
+[2.480s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_mac.h
+[2.480s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol1_packet_handler.h
+[2.480s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_linux.h
+[2.481s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_write.h
+[2.481s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_read.h
+[2.481s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_write.h
+[2.481s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_windows.h
+[2.481s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/include//dynamixel_sdk/dynamixel_sdk.h
+[2.482s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_read.h
+[2.482s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_arduino.h
+[2.482s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler.h
+[2.482s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/include//dynamixel_sdk/packet_handler.h
+[2.482s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/lib/libdynamixel_sdk.so
+[2.484s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.sh
+[2.484s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.dsv
+[2.484s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk
+[2.484s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk
+[2.485s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.sh
+[2.485s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.dsv
+[2.485s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.sh
+[2.485s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.dsv
+[2.485s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.bash
+[2.486s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.sh
+[2.486s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.zsh
+[2.486s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.dsv
+[2.486s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.dsv
+[2.486s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/ament_index/resource_index/packages/dynamixel_sdk
+[2.487s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.487s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_libraries-extras.cmake
+[2.487s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig.cmake
+[2.487s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig-version.cmake
+[2.487s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.xml
+[2.503s] Invoked command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/dynamixel_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --install /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/dynamixel_sdk

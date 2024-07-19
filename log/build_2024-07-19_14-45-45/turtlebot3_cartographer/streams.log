@@ -1,0 +1,46 @@
+[0.042s] Invoking command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/src/turtlebot3/turtlebot3_cartographer -DCMAKE_INSTALL_PREFIX=/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer
+[0.420s] -- The C compiler identification is GNU 11.4.0
+[0.421s] -- The CXX compiler identification is GNU 11.4.0
+[0.421s] -- Detecting C compiler ABI info
+[0.421s] -- Detecting C compiler ABI info - done
+[0.423s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.423s] -- Detecting C compile features
+[0.424s] -- Detecting C compile features - done
+[0.426s] -- Detecting CXX compiler ABI info
+[0.536s] -- Detecting CXX compiler ABI info - done
+[0.563s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.563s] -- Detecting CXX compile features
+[0.564s] -- Detecting CXX compile features - done
+[0.571s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.802s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+[1.111s] -- Configuring done (1.0s)
+[1.117s] -- Generating done (0.0s)
+[1.121s] -- Build files have been written to: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_cartographer
+[1.147s] Invoked command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/src/turtlebot3/turtlebot3_cartographer -DCMAKE_INSTALL_PREFIX=/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer
+[1.149s] Invoking command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --build /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_cartographer -- -j12 -l12
+[1.306s] Invoked command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --build /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_cartographer -- -j12 -l12
+[1.738s] Invoking command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --install /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_cartographer
+[1.876s] -- Install configuration: ""
+[1.876s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/config
+[1.876s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/config/turtlebot3_lds_2d.lua
+[1.876s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/launch
+[1.877s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/launch/occupancy_grid.launch.py
+[1.877s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/launch/cartographer.launch.py
+[1.877s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/rviz
+[1.878s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/rviz/tb3_cartographer.rviz
+[1.878s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/ament_index/resource_index/package_run_dependencies/turtlebot3_cartographer
+[1.878s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/ament_index/resource_index/parent_prefix_path/turtlebot3_cartographer
+[1.878s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/environment/ament_prefix_path.sh
+[1.879s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/environment/ament_prefix_path.dsv
+[1.879s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/environment/path.sh
+[1.879s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/environment/path.dsv
+[1.879s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/local_setup.bash
+[1.880s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/local_setup.sh
+[1.880s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/local_setup.zsh
+[1.881s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/local_setup.dsv
+[1.881s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/package.dsv
+[1.881s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/ament_index/resource_index/packages/turtlebot3_cartographer
+[1.881s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/cmake/turtlebot3_cartographerConfig.cmake
+[1.881s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/cmake/turtlebot3_cartographerConfig-version.cmake
+[1.881s] -- Installing: /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/package.xml
+[1.908s] Invoked command in '/home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tumwfml-ubunt6/ros2_ws/install/warehouse_robot_spawner_pkg:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_teleop:/home/tumwfml-ubunt6/ros2_ws/install/turtlebot3_example:/opt/ros/humble /home/tumwfml-ubunt6/.local/bin/cmake --install /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_cartographer
