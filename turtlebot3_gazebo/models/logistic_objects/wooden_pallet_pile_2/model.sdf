@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="wooden_pallet_pile_2">
+    <include>
+      <name>pallet_0</name>
+      <uri>model://wooden_pallet</uri>
+      <pose>0 0 0.04 0 0 0</pose>
+    </include>
+    <include>
+      <name>pallet_1</name>
+      <uri>model://wooden_pallet</uri>
+      <pose>0 0 0.15 0 0 0</pose>
+    </include>
+    <joint name="link_link" type="fixed">
+      <parent>pallet_0::link</parent>
+      <child>pallet_1::link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+  </model>
+</sdf>
