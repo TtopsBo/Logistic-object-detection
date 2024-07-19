@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<robot name="tugger_train"
+  xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find tugger_train_bringup)/urdf/tugger_train_gazebo.xacro"/>
+  <xacro:include filename="$(find tugger_train_bringup)/urdf/azure_kinect.urdf.xacro"/>
+
+  <material name="robot">
+    <color rgba="1 1 1 1"/>
+  </material>
+
+
+  <link name="base_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tugger_train_bringup/urdf/tugger_train.dae"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0.07"/>
+      <geometry>
+        <box size="1.7 1 0.14"/>
+      </geometry>
+    </collision>
+
+    <collision>
+      <origin xyz="0 0 0.35"/>
+      <geometry>
+        <box size="1.7 1 0.30"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+  <link name="inertia_link">
+    <inertial>
+      <mass value="1" />
+      <origin xyz="0 0 0.25" rpy="0 0 0" />
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0" izz="0.2" />
+    </inertial>
+  </link>
+  <joint name="base_link_to_inertia_link" type="fixed">
+    <parent link="base_link"/>
+    <child link="inertia_link"/>
+  </joint>
+
+  <link name="base_footprint">
+  </link>
+  <joint name="base_link_to_base_footprint" type="fixed">
+    <parent link="base_link"/>
+    <child link="base_footprint"/>
+    <origin xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <link name="laser_front_left_link"/>
+  <joint name="base_link_to_laser_front_left_link" type="fixed">
+    <parent link="base_link"/>
+    <child link="laser_front_left_link"/>
+    <origin xyz="0.791 0.441 0.15" rpy="0 0 ${45/180*pi}"/>
+  </joint>
+
+  <link name="laser_rear_right_link"/>
+  <joint name="base_link_to_laser_rear_right_link" type="fixed">
+    <parent link="base_link"/>
+    <child link="laser_rear_right_link"/>
+    <origin xyz="-0.791 -0.441 0.15" rpy="0 0 ${225/180*pi}"/>
+  </joint>
+
+
+  <link name="merged_lasers_link"/>
+  <joint name="base_link_to_merged_lasers_link" type="fixed">
+    <parent link="base_link"/>
+    <child link="merged_lasers_link"/>
+    <origin xyz="0 0 0.15"/>
+  </joint>
+
+  <joint name="base_link_to_depth_front_camera_base" type="fixed">
+    <parent link="base_link"/>
+    <child link="depth_front_camera_base"/>
+    <origin xyz="0.83 0 0.425" rpy="${pi} 0 0"/>
+  </joint>
+
+  <link name="depth_front_optical_link"/>
+  <joint name="depth_front_camera_base_to_depth_front_optical_link" type="fixed">
+    <parent link="depth_front_camera_base"/>
+    <child link="depth_front_optical_link"/>
+    <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+  </joint>
+
+</robot>

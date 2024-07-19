@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="wooden_pallet_pile_5">
+    <include>
+      <name>pallet_0</name>
+      <uri>model://wooden_pallet</uri>
+      <pose>0 0 0.02 0 0 0</pose>
+    </include>
+    <include>
+      <name>pallet_1</name>
+      <uri>model://wooden_pallet</uri>
+      <pose>0 0 0.145 0 0 0</pose>
+    </include>
+    <include>
+      <name>pallet_2</name>
+      <uri>model://wooden_pallet</uri>
+      <pose>0 0 0.290 0 0 0</pose>
+    </include>
+    <include>
+      <name>pallet_3</name>
+      <uri>model://wooden_pallet</uri>
+      <pose>0 0 0.435 0 0 0</pose>
+    </include>
+    <include>
+      <name>pallet_4</name>
+      <uri>model://wooden_pallet</uri>
+      <pose>0 0 0.570 0 0 0</pose>
+    </include>
+    <joint name="link0_link1" type="fixed">
+      <parent>pallet_0::link</parent>
+      <child>pallet_1::link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="link1_link2" type="fixed">
+      <parent>pallet_1::link</parent>
+      <child>pallet_2::link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="link2_link3" type="fixed">
+      <parent>pallet_2::link</parent>
+      <child>pallet_3::link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="link3_link4" type="fixed">
+      <parent>pallet_3::link</parent>
+      <child>pallet_4::link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+  </model>
+</sdf>
