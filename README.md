@@ -23,7 +23,9 @@
       ros2 launch turtlebot3_gazebo versuchshalle.launch.py
    ```
 ## Launch object detection
-1.  Launch logistic object detection
+1.  On a different terminal launch logistic object detection
    ```console
+      cd ros2_ws/
+      source install/setup.bash 
       ros2 launch turtlebot3_recognition launch_yolov8.launch.py
    ```
