@@ -35,10 +35,10 @@
    ros2 launch turtlebot3_recognition launch_yolov8.launch.py
    ```
 3. Open rviz to visualize the inference results. The configuration file can be found in the folder /turtlebot3_recognition/rviz
-    ```console
-   rviz2
-   ```
+```console
+rviz2
+```
 5. In a new terminal launch the keyboard teleoperation to move the robot around and perform object detection
-   ```console
-   ros2 run teleop_twist_keyboard teleop_twist_keyboard
-   ```
+```console
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
