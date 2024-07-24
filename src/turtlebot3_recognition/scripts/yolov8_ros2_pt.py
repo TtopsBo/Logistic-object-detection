@@ -8,8 +8,8 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 from ament_index_python.packages import get_package_share_directory
 
-from yolov8_msgs.msg import InferenceResult
-from yolov8_msgs.msg import Yolov8Inference
+from turtlebot3_recognition.msg import InferenceResult
+from turtlebot3_recognition.msg import Yolov8Inference
 
 bridge = CvBridge()
 
