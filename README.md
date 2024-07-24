@@ -22,3 +22,8 @@
    ```console
       ros2 launch turtlebot3_gazebo versuchshalle.launch.py
    ```
+## Launch object detection
+1.  Launch logistic object detection
+   ```console
+      ros2 launch turtlebot3_recognition launch_yolov8.launch.py
+   ```
