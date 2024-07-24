@@ -34,3 +34,8 @@
       source install/setup.bash 
       ros2 launch turtlebot3_recognition launch_yolov8.launch.py
    ```
+3. A suitable rviz configuration can be found in the folder /turtlebot3_recognition/rviz
+4. In a new terminal launch the keyboard teleoperation to move the robot around and perform object detection
+   ```console
+   ros2 run teleop_twist_keyboard teleop_twist_keyboard
+   ```
