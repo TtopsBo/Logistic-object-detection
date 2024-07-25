@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="forklift_loaded_stillage">
+    <include>
+      <name>forklift</name>
+      <uri>model://toyota_forklift</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>pallet_stillage</name>
+      <uri>model://wooden_pallet_stilage_a</uri>
+      <pose>-0.1 -1.65 -0.03 0 0 0</pose>
+    </include>
+    <joint name="froklift_pallet" type="fixed">
+      <parent>forklift::link</parent>
+      <child>pallet_stillage::pallet::link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+  </model>
+</sdf>

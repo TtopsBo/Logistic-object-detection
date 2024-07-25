@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="wooden_pallet_stilage_a">
+    <include>
+      <name>pallet</name>
+      <uri>model://wooden_pallet</uri>
+      <pose>0 0 0.12 0 0 0</pose>
+    </include>
+    <include>
+      <name>stillage_0</name>
+      <uri>model://stillage_box</uri>
+      <pose>0.07 0.04 0.14 0 0 0</pose>
+    </include>
+    <joint name="link_link" type="fixed">
+      <parent>pallet::link</parent>
+      <child>stillage_0::link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+  </model>
+</sdf>

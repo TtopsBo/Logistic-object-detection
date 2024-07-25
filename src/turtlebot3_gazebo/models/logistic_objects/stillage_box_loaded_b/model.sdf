@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="stillage_box_loaded_b">
+    <include>
+      <name>stillage_0</name>
+      <uri>model://stillage_box</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>klt_b</name>
+      <uri>model://klt_stack_2</uri>
+      <pose>0.45 -0.20 0.20 0 0 1.57</pose>
+    </include>
+    <include>
+      <name>klt_c</name>
+      <uri>model://klt_stack_2</uri>
+      <pose>-0.30 -0.20 0.20 0 0 0.30</pose>
+    </include>
+    <joint name="stillage_klt_b" type="fixed">
+      <parent>stillage_0::link</parent>
+      <child>klt_b::klt_0::link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="stillage_klt_c" type="fixed">
+      <parent>stillage_0::link</parent>
+      <child>klt_c::klt_0::link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+  </model>
+</sdf>

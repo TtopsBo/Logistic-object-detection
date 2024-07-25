@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="toyota_forklift">
+    <link name="link">
+      <pose>0 0 0 1.57 0 0</pose>
+      <inertial>
+        <mass>500.0</mass>
+        <inertia>
+          <ixx>0.60</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.40</iyy>
+          <iyz>0</iyz>
+          <izz>0.28</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://toyota_forklift/meshes/forklift.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://toyota_forklift/meshes/forklift.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
