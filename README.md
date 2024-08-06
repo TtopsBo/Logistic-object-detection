@@ -19,7 +19,10 @@
    source ~/.bashrc
    ```
 4.  Copy the models inside /turtlebot3_gazebo/models/logistic_objects to ~/.gazebo/models folder
-5.  Launch logistic simulation:
+   ```console
+   cp -r ~/ros2_ws/src/Logistic-object-detection/src/turtlebot3_gazebo/models/logistic_objects/* ~/.gazebo/models/
+   ```
+6.  Launch logistic simulation:
    ```console
    ros2 launch turtlebot3_gazebo versuchshalle.launch.py
    ```
