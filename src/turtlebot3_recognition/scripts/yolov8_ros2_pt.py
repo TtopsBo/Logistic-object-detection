@@ -29,7 +29,7 @@ class Camera_subscriber(Node):
 
         self.subscription = self.create_subscription(
             Image,
-            '/intel_realsense_r200_rgb/image_raw',
+            '/rgb_camera/rgb_camera/image_raw',
             self.camera_callback,
             10)
         self.subscription 

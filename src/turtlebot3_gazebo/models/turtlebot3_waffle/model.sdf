@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
   <model name="turtlebot3_waffle">  
-  <pose>0.0 0.0 0.0 0.0 0.0 -1.57</pose>
+  <pose>0.0 0.0 0.0 0.0 0.0 -2.10</pose>
 
     <link name="base_footprint"/>
 
@@ -88,7 +88,6 @@
         </imu>
         <plugin name="turtlebot3_imu" filename="libgazebo_ros_imu_sensor.so">
           <ros>
-            <!-- <namespace>/tb3</namespace> -->
             <argument>~/--ros-args --remap ~/out:=imu</argument>
           </ros>
         </plugin>
@@ -381,11 +380,11 @@
         </camera>
 	<plugin name="intel_realsense_r200_depth_driver" filename="libgazebo_ros_camera.so">
             <ros>
-              <argument>image_raw:=depth_camera/image_raw</argument>
-              <argument>image_depth:=depth_camera/image_depth</argument>
-              <argument>camera_info:=depth_camera/info_raw</argument>
-              <argument>camera_info_depth:=depth_camera/info_depth</argument>
-              <argument>points:=depthcamera/points</argument> 
+              <argument>--ros-args --remap image_raw:=depth_camera/image_raw</argument>
+              <argument>--ros-args --remap image_depth:=depth_camera/image_depth</argument>
+              <argument>--ros-args --remap camera_info:=depth_camera/info_raw</argument>
+              <argument>--ros-args --remap points:=depthcamera/points</argument>
+              <argument>--ros-args --remap points:=depthcamera/points</argument> 
             </ros>
             <camera_name>depth_camera</camera_name>
             <frame_name>realsense_depth_frame</frame_name>
@@ -418,9 +417,9 @@
         </camera>
           <plugin name="intel_realsense_r200_rgb_driver" filename="libgazebo_ros_camera.so">
             <ros>
-              <namespace>rgb_cam</namespace>
-              <argument>image_raw:=image_raw</argument>
-              <argument>camera_info:=camera_info</argument> 
+              <namespace>rgb_camera</namespace>
+              <argument>--ros-args --remap image_raw:=image_raw</argument>
+              <argument>--ros-args --remap camera_info:=camera_info</argument> 
             </ros>
             <camera_name>rgb_camera</camera_name>
             <frame_name>realsense_rgb_frame</frame_name>
