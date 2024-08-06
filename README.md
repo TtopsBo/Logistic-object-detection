@@ -1,4 +1,6 @@
 # Logistic-object-detection
+This project contains a Gazebo simulation with all the [LOCO](https://github.com/tum-fml/loco?tab=readme-ov-file) dataset and the chance to perform object detection using YOLOv8 n with this data.
+[Screencast from 08-06-2024 03:02:37 PM.webm](https://github.com/user-attachments/assets/40e422f1-cfc3-4586-b437-fb1ee3a9ccc3)
 
 ## Logistic simulation
 1.  Clone repository
