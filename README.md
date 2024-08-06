@@ -1,8 +1,10 @@
 # Logistic-object-detection
 This project contains a Gazebo simulation with all the [LOCO](https://github.com/tum-fml/loco?tab=readme-ov-file) dataset and the chance to perform object detection using YOLOv8 n with this data.
-[Screencast from 08-06-2024 03:02:37 PM.webm](https://github.com/user-attachments/assets/40e422f1-cfc3-4586-b437-fb1ee3a9ccc3)
 
 ## Logistic simulation
+
+![Screenshot from 2024-08-06 15-18-29](https://github.com/user-attachments/assets/b46cba82-d582-4351-8cc5-56ba18048712)
+
 1.  Clone repository
    ```console
    cd ros2_ws/src
@@ -29,6 +31,9 @@ This project contains a Gazebo simulation with all the [LOCO](https://github.com
    ros2 launch turtlebot3_gazebo versuchshalle.launch.py
    ```
 ## Launch object detection
+
+![Screencast-from-08-06-2024-03_02_37-PM](https://github.com/user-attachments/assets/5269630e-3364-47ef-b55b-98c26c450179)
+
 1.  Install ultralytics (if it is already installed jump to step 2)
    ```console
    pip3 install ultralytics
