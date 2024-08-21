@@ -56,9 +56,9 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ![Screencast-from-08-21-2024-04_42_29-PM](https://github.com/user-attachments/assets/1135a029-271b-4e1a-8baa-f2ccb37c6277)
 
 1. Launch 3D object detection
-   ```console
-   ros2 launch turtlebot3_recognition launch_3d_node.launch.py
-   ```
+```console
+ros2 launch turtlebot3_recognition launch_3d_node.launch.py
+```
 
 
 
