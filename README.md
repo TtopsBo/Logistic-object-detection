@@ -34,11 +34,11 @@ This project contains a Gazebo simulation with all the [LOCO](https://github.com
 
 ![Screencast-from-08-06-2024-03_02_37-PM](https://github.com/user-attachments/assets/5269630e-3364-47ef-b55b-98c26c450179)
 
-1.  Install ultralytics (if it is already installed jump to step 2)
+1. Install ultralytics (if it is already installed jump to step 2)
    ```console
    pip3 install ultralytics
    ```
-2.  On a different terminal launch logistic object detection
+2. On a different terminal launch logistic object detection
    ```console
    cd ros2_ws/
    source install/setup.bash 
@@ -52,3 +52,13 @@ rviz2
 ```console
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
+## 3D object detection
+![Screencast-from-08-21-2024-04_42_29-PM](https://github.com/user-attachments/assets/1135a029-271b-4e1a-8baa-f2ccb37c6277)
+
+1. Launch 3D object detection
+   ```console
+   ros2 launch turtlebot3_recognition launch_3d_node.launch.py
+   ```
+
+
+
