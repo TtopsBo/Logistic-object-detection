@@ -18,11 +18,14 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(visualization_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
     "msg/InferenceResult.msg"
     "msg/Yolov8Inference.msg"
-    DEPENDENCIES std_msgs
+    "msg/BoundingBox3D.msg"
+    DEPENDENCIES std_msgs geometry_msgs
  )
 ament_export_dependencies(rosidl_default_runtime)
 
@@ -50,7 +53,10 @@ install(
   PROGRAMS
   scripts/yolov8_ros2_pt.py
   scripts/yolov8_ros2_subscriber.py
+  scripts/yolo_depth_segmentation.py
+  scripts/bounding_box_marker_publisher.py
   launch/launch_yolov8.launch.py
+  launch/launch_3d_node.launch.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
