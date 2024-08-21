@@ -45,20 +45,20 @@ This project contains a Gazebo simulation with all the [LOCO](https://github.com
    ros2 launch turtlebot3_recognition launch_yolov8.launch.py
    ```
 3. Open rviz to visualize the inference results. The configuration file can be found in the folder /turtlebot3_recognition/rviz
-```console
-rviz2
-```
+   ```console
+   rviz2
+   ```
 5. In a new terminal launch the keyboard teleoperation to move the robot around and perform object detection
-```console
-ros2 run teleop_twist_keyboard teleop_twist_keyboard
-```
+   ```console
+   ros2 run teleop_twist_keyboard teleop_twist_keyboard
+   ```
 ## 3D object detection
 ![Screencast-from-08-21-2024-04_42_29-PM](https://github.com/user-attachments/assets/1135a029-271b-4e1a-8baa-f2ccb37c6277)
 
 1. Launch 3D object detection
-```console
-ros2 launch turtlebot3_recognition launch_3d_node.launch.py
-```
+   ```console
+   ros2 launch turtlebot3_recognition launch_3d_node.launch.py
+   ```
 
 
 
