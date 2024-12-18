@@ -36,7 +36,7 @@ This project contains a Gazebo simulation with all the [LOCO](https://github.com
 
 1. Install ultralytics (if it is already installed jump to step 2)
    ```console
-   pip3 install ultralytics
+   pip3 install ultralytics==8.3.40
    ```
 2. On a different terminal launch logistic object detection
    ```console
