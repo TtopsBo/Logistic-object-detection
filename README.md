@@ -46,7 +46,7 @@ This project contains a Gazebo simulation with all the [LOCO](https://github.com
    ```
 3. Open rviz to visualize the inference results. The configuration file can be found in the folder /turtlebot3_recognition/rviz
    ```console
-   rviz2
+   rviz2 -d $(pwd)/src/turtlebot3_ws/src/turtlebot3_recognition/rviz/rviz.rviz
    ```
 5. In a new terminal launch the keyboard teleoperation to move the robot around and perform object detection
    ```console
