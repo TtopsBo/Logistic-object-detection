@@ -7,7 +7,7 @@ def generate_launch_description():
     # Declare the 'working_frame' argument with a default value
     working_frame_arg = DeclareLaunchArgument(
         'working_frame',
-        default_value='odom',
+        default_value='rgb_camera_link',
         description='The working frame for 3D marker publisher'
     )
 

@@ -45,7 +45,7 @@ class Camera_subscriber(Node):
 
         self.subscription = self.create_subscription(
             Image,
-            '/rgb_camera/rgb_camera/image_raw',
+            '/rgb/image_rect_color',
             self.camera_callback,
             10)
         self.subscription 
@@ -56,7 +56,7 @@ class Camera_subscriber(Node):
     def camera_callback(self, data):
 
         img = bridge.imgmsg_to_cv2(data, "bgr8")
-        results = self.model(img)
+        results = self.model(img, imgsz=640)
 
         self.yolov8_inference.header.frame_id = "inference"
         self.yolov8_inference.header.stamp = camera_subscriber.get_clock().now().to_msg()
@@ -69,10 +69,10 @@ class Camera_subscriber(Node):
                 c = box.cls
                 conf = float(box.conf) 
                 self.inference_result.class_name = self.model.names[int(c)]
-                self.inference_result.top = int(b[0])
-                self.inference_result.left = int(b[1])
-                self.inference_result.bottom = int(b[2])
-                self.inference_result.right = int(b[3])
+                self.inference_result.left = int(b[0])
+                self.inference_result.top = int(b[1])
+                self.inference_result.right = int(b[2])
+                self.inference_result.bottom = int(b[3])
                 self.inference_result.conf = conf
                 self.yolov8_inference.yolov8_inference.append(self.inference_result)
 

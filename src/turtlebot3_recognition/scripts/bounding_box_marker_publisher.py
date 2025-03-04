@@ -46,7 +46,7 @@ class BoundingBoxMarkerPublisher(Node):
         
         self.marker_publisher = self.create_publisher(Marker, '/bounding_box_3d_marker', 10)
         
-        self.working_frame = "odom"
+        self.working_frame = "rgb_camera_link"
         self.registered_objects = []  # List to store registered objects
 
 

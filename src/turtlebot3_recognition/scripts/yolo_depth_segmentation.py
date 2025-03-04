@@ -42,7 +42,7 @@ class YoloDepthSegmentationNode(Node):
         # Subscribe to the depth image topic
         self.depth_subscriber = self.create_subscription(
             Image,
-            '/depth_camera/depth/image_raw',
+            '/depth_to_rgb/image_raw',
             self.depth_image_callback,
             10
         )
@@ -50,7 +50,7 @@ class YoloDepthSegmentationNode(Node):
         # Subscribe to the camera info topic to get camera parameters
         self.camera_info_subscriber = self.create_subscription(
             CameraInfo,
-            '/depth_camera/depth/camera_info',
+            '/depth_to_rgb/camera_info',
             self.camera_info_callback,
             10
         )
@@ -78,7 +78,14 @@ class YoloDepthSegmentationNode(Node):
 
     def depth_image_callback(self, msg):
         # Convert the ROS Image message to an OpenCV image
+     
         self.depth_image = self.bridge.imgmsg_to_cv2(img_msg=msg, desired_encoding='passthrough')
+        if self.camera_info is None:
+            self.get_logger().warn('Camera info is not received yet.')
+            return
+        K = np.array(self.camera_info.k).reshape(3, 3)
+        D = np.array(self.camera_info.d)
+        self.depth_image = cv2.undistort(self.depth_image, K, D)
         self.frame_id = msg.header.frame_id
 
     
@@ -91,7 +98,7 @@ class YoloDepthSegmentationNode(Node):
         # Check if we have bounding boxes to crop the depth image
         if self.bounding_boxes and self.depth_image is not None:
             for box in self.bounding_boxes:
-                top, left, bottom, right = round(box.left/2), round(box.top/2), round(box.right/2),  round(box.bottom/2)
+                left, top, right, bottom = round(box.left), round(box.top), round(box.right),  round(box.bottom)
                 cropped_depth_image = self.depth_image[top:bottom, left:right]
                 class_name = box.class_name
                 confidence = box.conf
@@ -101,7 +108,7 @@ class YoloDepthSegmentationNode(Node):
                 # self.visualize_depth_image(self.depth_image, 'Full Depth Image')
                 
                 # Apply depth filtering
-                filtered_image = self.apply_depth_filter(cropped_depth_image)
+                filtered_image = self.apply_cumulative_hist_depth_filter(cropped_depth_image)
                 
                 # Display the filtered depth image for debugging
                 # self.visualize_depth_image(filtered_image, 'Filtered Depth Image')
@@ -110,34 +117,81 @@ class YoloDepthSegmentationNode(Node):
                 self.publish_3d_marker(filtered_image, top, left, class_name, confidence)
 
         
-    def apply_depth_filter(self, depth_image):
+    def apply_cumulative_hist_depth_filter(self, depth_image, ignore_background = False, resolution = 1, max_height_percent = 5 ):
         # Flatten the depth image to analyze the depth values
         depth_values = depth_image.flatten()
-        depth_values = depth_values[depth_values > 0]  # Exclude zero (no data) values
+        depth_values = depth_values[np.isfinite(depth_values)] # Exclude zero (no data) values
 
         if len(depth_values) == 0:
             return depth_image
 
         # Calculate the histogram of depth values
-        hist, bin_edges = np.histogram(depth_values, bins=100)
+        bins = round(max(val for val in depth_values if np.isfinite(val)) / 100)
+        hist, bin_edges = np.histogram(depth_values, bins=bins)
 
         # Find the bin with the maximum count (the most common depth)
-        max_bin_index = np.argmax(hist)
-        dominant_depth = (bin_edges[max_bin_index] + bin_edges[max_bin_index + 1]) / 2
+        max_peak_index = np.argmax(hist)
+        min_height = hist[max_peak_index]*max_height_percent/100
+        
+        # Detect peaks in the histogram
+        threshold = max(np.average(hist[:]), min_height)
+        peaks = np.where(hist > threshold)[0]
 
-        # Define a range around the dominant depth to keep (e.g., +- 10% of the dominant depth)
-        depth_range = 0.1 * dominant_depth
-        lower_bound = dominant_depth - depth_range
-        upper_bound = dominant_depth + depth_range
+        min_height = hist[max_peak_index]*max_height_percent/100
+        
+        if len(peaks) > 0:
+            results_dict = []
+            # Assume the most significant peak is the object of interest
+            for peak in peaks:
+                left_edge, right_edge, count = self.calculate_peak_region(peak, hist, min_height)
+                results_dict.append({
+                'left_edge': left_edge,
+                'right_edge': right_edge,
+                'count': count
+            })
 
-        # Create a mask to filter out depth values outside the range
-        mask = (depth_image >= lower_bound) & (depth_image <= upper_bound)
+            # Sort results_dict by 'count' in descending order
+            sorted_results = sorted(results_dict, key=lambda x: x['count'], reverse=True)
+            
+            # Remove duplicates based on (left_edge, right_edge)
+            unique_results = { (item['left_edge'], item['right_edge']): item for item in sorted_results }
 
-        # Apply the mask to the depth image
-        filtered_image = np.where(mask, depth_image, 0)
+            # Convert back to a list of dictionaries
+            sorted_results = list(unique_results.values())
 
-        return filtered_image
+            # Find the element with the largest count, excluding the last peak if remove_background is True
+            if ignore_background:
+                dominant_peak = next((elem for elem in sorted_results if elem['right_edge'] != len(hist) - 1), sorted_results[0])
+            else:
+                dominant_peak = sorted_results[0]
 
+            left_edge = dominant_peak['left_edge']
+            right_edge = dominant_peak['right_edge']
+            lower_bound = bin_edges[left_edge]
+            upper_bound = bin_edges[right_edge]
+
+            # Create a mask to filter out depth values outside the range
+            mask = (depth_image >= lower_bound) & (depth_image <= upper_bound)
+
+            # Apply the mask to the depth image
+            filtered_image = np.where(mask, depth_image, 0)
+
+            return filtered_image
+
+    def calculate_peak_region(self, peak_index, hist, h_threshold):
+        left_edge = peak_index
+        right_edge = peak_index
+
+        # Extend edges based on std_dev threshold
+        while left_edge > 0 and hist[left_edge] > h_threshold:
+            left_edge -= 1
+        while right_edge < len(hist) - 1 and hist[right_edge] > h_threshold:
+            right_edge += 1
+
+        # Calculate the number of elements within this range
+        element_count = np.sum(hist[left_edge:right_edge+1])
+
+        return left_edge, right_edge, element_count
 
     def calculate_orientation_from_bbox(self, min_x, z_min_x, x_min_z, min_z):
         # Calculate the angle (theta) in the XZ plane
@@ -171,7 +225,7 @@ class YoloDepthSegmentationNode(Node):
             return
 
         # Convert pixel coordinates to 3D world coordinates
-        z = depth_values # Assuming depth is in millimeters
+        z = depth_values / 1000# Assuming depth is in millimeters
         x = (coords[:, 1] + left - cx) * z / fx
         y = (coords[:, 0] + top - cy) * z / fy
         
