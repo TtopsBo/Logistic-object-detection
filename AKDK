@@ -1,0 +1,26 @@
+cd ros2_ws 
+cd Azure_Kinect_ROS_Driver
+ros2 launch azure_kinect_ros_driver driver.launch.py color_enabled:=true point_cloud_in_depth_frame:=false color_resolution:=1440P depth_mode:=NFOV_UNBINNED
+ros2 launch image_proc image_proc.launch.py namespace:=rgb
+ros2 launch turtlebot3_recognition launch_yolov8.launch.py
+ros2 launch turtlebot3_recognition launch_3d_node.launch.py
+
+##ros2 launch image_proc image_proc.launch.py namespace:=depth_to_rgb
+
+rgb_camera_link
+
+rgb/image_raw
+rgb/camera_info
+depth/image_raw
+depth/camera_info
+depth_to_rgb/image_raw
+depth_to_rgb/camera_info
+
+rgb/image_rect_color
+
+depth_to_rgb/image_rect
+
+depth 640*576
+color 1280*720
+
+
