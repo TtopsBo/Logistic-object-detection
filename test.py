@@ -54,29 +54,49 @@ def undistort_depth_image(depth_image, camera_matrix, dist_coeffs):
 
     return undistorted_depth
 
+def undistort(depth_image, K, D):
+
+    K = np.array(K).reshape(3, 3)
+    D = np.array(D)
+
+    undistorted = cv2.undistort(depth_image, K, D)
+    return undistorted
+
 def overlay_images(img1, img2, alpha=0.5):
     """
     叠加两张图像，使用 alpha 混合，alpha 控制透明度
     """
     return cv2.addWeighted(img1, alpha, img2, 1 - alpha, 0)
 
-def visualize_overlay(depth_distorted, depth_undistorted):
+def visualize_overlay(color, undistorted, depth_distorted, depth_undistorted):
     """
     直观展示畸变前后的深度图
     """
+    color_image = cv2.cvtColor(color, cv2.COLOR_BGRA2BGR)
+
     # 将深度图归一化到 0-255 并转换为伪彩色图
+    undistorted_colormap = cv2.applyColorMap(cv2.convertScaleAbs(undistorted, alpha=255.0/np.max(undistorted)), cv2.COLORMAP_JET)
     depth_distorted_colormap = cv2.applyColorMap(cv2.convertScaleAbs(depth_distorted, alpha=255.0/np.max(depth_distorted)), cv2.COLORMAP_JET)
     depth_undistorted_colormap = cv2.applyColorMap(cv2.convertScaleAbs(depth_undistorted, alpha=255.0/np.max(depth_undistorted)), cv2.COLORMAP_JET)
-
+    mask = (depth_undistorted > 0).astype(np.uint8) * 255  # 255 = 有效, 0 = 无效
+    mask_colormap = cv2.cvtColor(mask, cv2.COLOR_GRAY2BGR) # 转换为 3 通道图像
     # 叠加图像
-    overlay = overlay_images(depth_distorted_colormap, depth_undistorted_colormap, alpha=0.5)
-
+    overlay1 = overlay_images(depth_distorted_colormap, depth_undistorted_colormap, alpha=0.5)
+    overlay2 = overlay_images(undistorted_colormap, depth_undistorted_colormap, alpha=0.5)
+    #overlay3 = overlay_images(color_image, depth_undistorted_colormap, alpha=0.5)
+    overlay3 = overlay_images(color_image, undistorted_colormap, alpha=0.5)
     # 显示结果
+    cv2.imshow("Mask (Valid vs Invalid Depth)", mask) # 白色 = 有效, 黑色 = 无效
+    cv2.imshow("Mask Colormap", mask_colormap)
+    cv2.imshow("UNDistorted", undistorted_colormap)
     cv2.imshow("Distorted Depth", depth_distorted_colormap)
     cv2.imshow("Undistorted Depth", depth_undistorted_colormap)
-    cv2.imshow("Overlay", overlay)
+    cv2.imshow("Overlay1", overlay1)
+    cv2.imshow("Overlay2", overlay2)
+    cv2.imshow("Overlay3", overlay3)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
+
 
 
 # 启用 color camera 并使用 depth_to_rgb
@@ -91,8 +111,11 @@ capture = k4a.get_capture()
 
 
 # **获取对齐到 RGB 的深度图**
+color_image = capture.color
+#print(color_image.shape)
+cv2.imshow("color", color_image)
 depth_image = capture.transformed_depth  # 这里是对齐到 RGB 的深度图
-
+#print(depth_image.shape)
 if depth_image is None:
     print("未能获取对齐的深度图，请检查 Kinect 连接")
 else:
@@ -101,12 +124,13 @@ else:
 
 rgb_camera_matrix, rgb_dist_coeffs = get_camera_matrices(k4a)
 undistorted_depth = undistort_depth_image(depth_image, rgb_camera_matrix, rgb_dist_coeffs)
-
+undistorted = undistort(depth_image, rgb_camera_matrix, rgb_dist_coeffs)
 
 # 显示原始和去畸变深度图
-cv2.imshow("k4a", colorize(depth_image, (None, 5000)))
-cv2.imshow("Undistorted Depth0", colorize(undistorted_depth, (None, 5000)))
-visualize_overlay(depth_image, undistorted_depth)
+#cv2.imshow("k4a", colorize(depth_image, (None, 5000)))
+#cv2.imshow("Undistorted Depth0", colorize(undistorted_depth, (None, 5000)))
+
+visualize_overlay(color_image, undistorted, depth_image, undistorted_depth)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
