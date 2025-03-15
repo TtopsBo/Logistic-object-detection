@@ -36,7 +36,7 @@ def undistort_depth_image(depth_image, camera_matrix, dist_coeffs):
     """
     h, w = depth_image.shape
     new_camera_matrix, roi = cv2.getOptimalNewCameraMatrix(
-        camera_matrix, dist_coeffs, (w, h), 1, (w, h)
+        camera_matrix, dist_coeffs, (w, h), 0, (w, h)
     )
 
     # 计算映射表

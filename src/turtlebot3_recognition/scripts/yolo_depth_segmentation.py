@@ -85,7 +85,15 @@ class YoloDepthSegmentationNode(Node):
             return
         K = np.array(self.camera_info.k).reshape(3, 3)
         D = np.array(self.camera_info.d)
-        self.depth_image = cv2.undistort(self.depth_image, K, D)
+        h, w = self.depth_image.shape
+        self.new_camera_matrix, roi = cv2.getOptimalNewCameraMatrix(
+        K, D, (w, h), 0, (w, h)
+    )
+        map1, map2 = cv2.initUndistortRectifyMap(
+        K, D, None, self.new_camera_matrix, (w, h), cv2.CV_32FC1
+    )
+        self.depth_image = cv2.remap(self.depth_image, map1, map2, interpolation=cv2.INTER_NEAREST)
+        
         self.frame_id = msg.header.frame_id
 
     
@@ -212,6 +220,7 @@ class YoloDepthSegmentationNode(Node):
             return 
         
         # Intrinsic parameters
+        self.camera_info.k = np.array(self.new_camera_matrix).reshape(self.camera_info.k.shape)
         fx = self.camera_info.k[0]
         fy = self.camera_info.k[4]
         cx = self.camera_info.k[2]
