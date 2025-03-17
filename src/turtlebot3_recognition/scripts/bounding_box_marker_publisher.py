@@ -21,9 +21,9 @@ import numpy as np
 from rclpy.node import Node
 from rclpy.duration import Duration
 from visualization_msgs.msg import Marker
-from geometry_msgs.msg import Pose, Vector3
+from geometry_msgs.msg import Pose, Vector3, TransformStamped
 from turtlebot3_recognition.msg import BoundingBox3D  # Replace with your actual package name
-
+import geometry_msgs.msg
 import tf2_ros
 import tf2_geometry_msgs
 import tf_transformations as tf
@@ -32,11 +32,14 @@ from tf2_ros import LookupException, ConnectivityException, ExtrapolationExcepti
 class BoundingBoxMarkerPublisher(Node):
     def __init__(self):
         super().__init__('bounding_box_marker_publisher')
-        
+
         # Initialize TF2 buffer and listener
         self.tf_buffer = tf2_ros.Buffer()
         self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
-        
+
+        self.tf_broadcaster = tf2_ros.TransformBroadcaster(self)
+       
+
         self.subscription = self.create_subscription(
             BoundingBox3D,
             '/bounding_boxes_3d',
@@ -46,9 +49,11 @@ class BoundingBoxMarkerPublisher(Node):
         
         self.marker_publisher = self.create_publisher(Marker, '/bounding_box_3d_marker', 10)
         
-        self.working_frame = "odom"
+        self.working_frame = "camera_color_optical_frame"  
         self.registered_objects = []  # List to store registered objects
-
+        
+        self.current_frame_id = None  # 记录当前帧的 ID
+        self.last_frame_tf_ids = []  # 记录上一帧的 TF ID 以便清理
 
     def bounding_box_callback(self, msg: BoundingBox3D): 
         class_name = msg.object_name
@@ -69,6 +74,7 @@ class BoundingBoxMarkerPublisher(Node):
                 marker_id = self.generate_marker_id()
                 self.registered_objects.append((class_name, marker_id, position))
             
+
             # Define the marker
             marker = Marker()
             marker.header.frame_id = self.working_frame
@@ -93,15 +99,47 @@ class BoundingBoxMarkerPublisher(Node):
             marker.color.a = msg.conf
             
             # Set marker to disappear after 2 seconds
-            marker.lifetime = Duration(seconds=2).to_msg()
+            marker.lifetime = Duration(seconds=0.2).to_msg()
 
             # Publish the marker
             self.marker_publisher.publish(marker)
+
             
+            current_tf_id = f"{class_name}_{marker_id}"
+            
+            self.clear_previous_tf()
+            
+            
+            # 记录本帧生成的 TF
+            self.last_frame_tf_ids.append(current_tf_id)
+            self.broadcast_bounding_box_tf(current_tf_id, transformed_pose)
+
         except (LookupException, ConnectivityException, ExtrapolationException) as e:
             # self.get_logger().warn(f"Could not transform marker pose: {e}")
             print("Waiting local frame to become available")
-       
+
+    
+
+    def broadcast_bounding_box_tf(self, tf_id, transformed_pose):
+        # Create a TransformStamped message for the bounding box's TF
+        transform = TransformStamped()
+        transform.header.stamp = self.get_clock().now().to_msg()
+        transform.header.frame_id = self.working_frame  # Reference frame
+        transform.child_frame_id = tf_id  # Object-specific frame
+
+        # Set the translation (position) and rotation (orientation)
+        transform.transform.translation.x = transformed_pose.position.x
+        transform.transform.translation.y = transformed_pose.position.y
+        transform.transform.translation.z = transformed_pose.position.z
+        transform.transform.rotation = transformed_pose.orientation
+
+        self.tf_broadcaster.sendTransform(transform)
+
+    def clear_previous_tf(self):
+        """清除上一帧的 TF，确保只保留当前帧的 TF"""
+        
+
+        self.last_frame_tf_ids = []  # 清空上一帧的 TF 记录
         
     def get_color_for_class(self, class_name):
         color_map = {
