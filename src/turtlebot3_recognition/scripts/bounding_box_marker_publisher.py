@@ -93,7 +93,7 @@ class BoundingBoxMarkerPublisher(Node):
             marker.color.a = msg.conf
             
             # Set marker to disappear after 2 seconds
-            marker.lifetime = Duration(seconds=2).to_msg()
+            marker.lifetime = Duration(seconds=0.2).to_msg()
 
             # Publish the marker
             self.marker_publisher.publish(marker)

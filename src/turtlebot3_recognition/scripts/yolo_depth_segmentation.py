@@ -129,8 +129,8 @@ class YoloDepthSegmentationNode(Node):
         # Flatten the depth image to analyze the depth values
         # depth_values = depth_image.flatten()
         # depth_values = depth_values[np.isfinite(depth_values)] # Exclude zero (no data) values
-        MIN_DEPTH = 0.5  # 最小检测距离 (根据模式调整)
-        MAX_DEPTH = 3.86  # 最大检测距离 (根据模式调整)
+        MIN_DEPTH = 500  # 最小检测距离 (根据模式调整)
+        MAX_DEPTH = 3860  # 最大检测距离 (根据模式调整)
 
         depth_values = depth_image.flatten()
         depth_values = depth_values[(depth_values > 0) & np.isfinite(depth_values)]

@@ -53,7 +53,14 @@ class Camera_subscriber(Node):
         self.yolov8_pub = self.create_publisher(Yolov8Inference, "/Yolov8_Inference", 1)
         self.img_pub = self.create_publisher(Image, "/inference_result", 1)
 
+        self.last_time = self.get_clock().now().nanoseconds / 1e9  # 记录初始化时间
     def camera_callback(self, data):
+
+        current_time = self.get_clock().now().nanoseconds / 1e9  # 获取当前时间（秒）
+        if current_time - self.last_time < 0.2:  # 设置 0.2s 的间隔
+            return  # 如果间隔不到 0.2s，则跳过处理
+
+        self.last_time = current_time  # 更新上一次运行的时间
 
         img = bridge.imgmsg_to_cv2(data, "bgr8")
         results = self.model(img, imgsz=640)
