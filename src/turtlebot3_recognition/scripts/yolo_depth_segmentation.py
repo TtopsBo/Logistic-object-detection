@@ -42,7 +42,7 @@ class YoloDepthSegmentationNode(Node):
         # Subscribe to the depth image topic
         self.depth_subscriber = self.create_subscription(
             Image,
-            '/depth_camera/depth/image_raw',
+            '/camera/camera/aligned_depth_to_color/image_raw',
             self.depth_image_callback,
             10
         )
@@ -50,7 +50,7 @@ class YoloDepthSegmentationNode(Node):
         # Subscribe to the camera info topic to get camera parameters
         self.camera_info_subscriber = self.create_subscription(
             CameraInfo,
-            '/depth_camera/depth/camera_info',
+            '/camera/camera/aligned_depth_to_color/camera_info',
             self.camera_info_callback,
             10
         )
@@ -91,7 +91,7 @@ class YoloDepthSegmentationNode(Node):
         # Check if we have bounding boxes to crop the depth image
         if self.bounding_boxes and self.depth_image is not None:
             for box in self.bounding_boxes:
-                top, left, bottom, right = round(box.left/2), round(box.top/2), round(box.right/2),  round(box.bottom/2)
+                top, left, bottom, right = round(box.left), round(box.top), round(box.right),  round(box.bottom)
                 cropped_depth_image = self.depth_image[top:bottom, left:right]
                 class_name = box.class_name
                 confidence = box.conf
@@ -171,7 +171,7 @@ class YoloDepthSegmentationNode(Node):
             return
 
         # Convert pixel coordinates to 3D world coordinates
-        z = depth_values # Assuming depth is in millimeters
+        z = depth_values /1000 # Assuming depth is in millimeters
         x = (coords[:, 1] + left - cx) * z / fx
         y = (coords[:, 0] + top - cy) * z / fy
         

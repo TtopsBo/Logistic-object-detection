@@ -35,7 +35,7 @@ class Camera_subscriber(Node):
         super().__init__('camera_subscriber')
         
         weights = os.path.join(
-        get_package_share_directory('turtlebot3_recognition'),
+        '/home/boyan/ros2_ws/src/Logistic-object-detection/src/turtlebot3_recognition',
         'models',
         'yolov11n.pt'
     )
@@ -45,7 +45,7 @@ class Camera_subscriber(Node):
 
         self.subscription = self.create_subscription(
             Image,
-            '/rgb_camera/rgb_camera/image_raw',
+            '/camera/camera/color/image_raw',
             self.camera_callback,
             10)
         self.subscription 
