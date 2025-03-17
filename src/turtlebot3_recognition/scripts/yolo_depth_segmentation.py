@@ -125,16 +125,22 @@ class YoloDepthSegmentationNode(Node):
                 self.publish_3d_marker(filtered_image, top, left, class_name, confidence)
 
         
-    def apply_cumulative_hist_depth_filter(self, depth_image, ignore_background = False, resolution = 1, max_height_percent = 5 ):
+    def apply_cumulative_hist_depth_filter(self, depth_image, ignore_background = False, resolution = 10, max_height_percent = 5 ):
         # Flatten the depth image to analyze the depth values
+        # depth_values = depth_image.flatten()
+        # depth_values = depth_values[np.isfinite(depth_values)] # Exclude zero (no data) values
+        MIN_DEPTH = 0.5  # 最小检测距离 (根据模式调整)
+        MAX_DEPTH = 3.86  # 最大检测距离 (根据模式调整)
+
         depth_values = depth_image.flatten()
-        depth_values = depth_values[np.isfinite(depth_values)] # Exclude zero (no data) values
+        depth_values = depth_values[(depth_values > 0) & np.isfinite(depth_values)]
+        depth_values = depth_values[(depth_values >= MIN_DEPTH) & (depth_values <= MAX_DEPTH) & np.isfinite(depth_values)]
 
         if len(depth_values) == 0:
             return depth_image
 
         # Calculate the histogram of depth values
-        bins = round(max(val for val in depth_values if np.isfinite(val)) / 100)
+        bins = round(max(val for val in depth_values if np.isfinite(val)) / resolution)
         hist, bin_edges = np.histogram(depth_values, bins=bins)
 
         # Find the bin with the maximum count (the most common depth)

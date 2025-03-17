@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 import pyk4a
-from pyk4a import Config, PyK4A
+from pyk4a import Config, PyK4A, DepthMode, FPS
 from typing import Optional, Tuple
 import open3d as o3d
 
@@ -103,6 +103,7 @@ def visualize_overlay(color, undistorted, depth_distorted, depth_undistorted):
 k4a = PyK4A(Config(
     color_resolution=pyk4a.ColorResolution.RES_1080P,  # 启用 RGB
     depth_mode=pyk4a.DepthMode.NFOV_UNBINNED,  # 深度模式
+    camera_fps=FPS.FPS_15,  # 帧率
     synchronized_images_only=True  # 只返回对齐的图像
 ))
 k4a.start()
@@ -111,9 +112,7 @@ capture = k4a.get_capture()
 
 
 # **获取对齐到 RGB 的深度图**
-color_image = capture.color
-#print(color_image.shape)
-cv2.imshow("color", color_image)
+
 depth_image = capture.transformed_depth  # 这里是对齐到 RGB 的深度图
 #print(depth_image.shape)
 if depth_image is None:
@@ -126,6 +125,10 @@ rgb_camera_matrix, rgb_dist_coeffs = get_camera_matrices(k4a)
 undistorted_depth = undistort_depth_image(depth_image, rgb_camera_matrix, rgb_dist_coeffs)
 undistorted = undistort(depth_image, rgb_camera_matrix, rgb_dist_coeffs)
 
+color_image = capture.color
+newcameramtx, roi = cv2.getOptimalNewCameraMatrix(rgb_camera_matrix, rgb_dist_coeffs, (color_image.shape[0], color_image.shape[1]), 0, (color_image.shape[0], color_image.shape[1]))
+color_image = cv2.undistort(color_image, rgb_camera_matrix, rgb_dist_coeffs, None, newCameraMatrix=newcameramtx)
+cv2.imshow("color", color_image)
 # 显示原始和去畸变深度图
 #cv2.imshow("k4a", colorize(depth_image, (None, 5000)))
 #cv2.imshow("Undistorted Depth0", colorize(undistorted_depth, (None, 5000)))
