@@ -56,8 +56,12 @@ install(
   scripts/yolov8_ros2_subscriber.py
   scripts/yolo_depth_segmentation.py
   scripts/bounding_box_marker_publisher.py
+  scripts/EKF.py
+  scripts/MFE_pose.py
   launch/launch_yolov8.launch.py
   launch/launch_3d_node.launch.py
+  launch/launch_EKF_node.launch.py
+  launch/launch_MFE_node.launch.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

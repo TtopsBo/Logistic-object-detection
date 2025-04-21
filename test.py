@@ -87,13 +87,13 @@ def visualize_overlay(color, undistorted, depth_distorted, depth_undistorted):
     overlay3 = overlay_images(color_image, undistorted_colormap, alpha=0.5)
     # 显示结果
     cv2.imshow("Mask (Valid vs Invalid Depth)", mask) # 白色 = 有效, 黑色 = 无效
-    cv2.imshow("Mask Colormap", mask_colormap)
-    cv2.imshow("UNDistorted", undistorted_colormap)
-    cv2.imshow("Distorted Depth", depth_distorted_colormap)
-    cv2.imshow("Undistorted Depth", depth_undistorted_colormap)
-    cv2.imshow("Overlay1", overlay1)
-    cv2.imshow("Overlay2", overlay2)
-    cv2.imshow("Overlay3", overlay3)
+    #cv2.imshow("Mask Colormap", mask_colormap)
+    #cv2.imshow("UNDistorted", undistorted_colormap)
+    #cv2.imshow("Distorted Depth", depth_distorted_colormap)
+    #cv2.imshow("Undistorted Depth", depth_undistorted_colormap)
+    #cv2.imshow("Overlay1", overlay1)
+    #cv2.imshow("Overlay2", overlay2)
+    #cv2.imshow("Overlay3", overlay3)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
@@ -102,7 +102,7 @@ def visualize_overlay(color, undistorted, depth_distorted, depth_undistorted):
 # 启用 color camera 并使用 depth_to_rgb
 k4a = PyK4A(Config(
     color_resolution=pyk4a.ColorResolution.RES_1080P,  # 启用 RGB
-    depth_mode=pyk4a.DepthMode.NFOV_UNBINNED,  # 深度模式
+    depth_mode=pyk4a.DepthMode.WFOV_2X2BINNED,  # 深度模式
     camera_fps=FPS.FPS_15,  # 帧率
     synchronized_images_only=True  # 只返回对齐的图像
 ))

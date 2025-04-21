@@ -28,22 +28,13 @@ import cv2
 import numpy as np
 from cv_bridge import CvBridge
 import tf_transformations as tf
+from filterpy.kalman import KalmanFilter
 
-import time
 
-def timing_decorator(func):
-    def wrapper(*args, **kwargs):
-        start_time = time.time()
-        result = func(*args, **kwargs)
-        duration = time.time() - start_time
-        args[0].get_logger().info(f"[Timing] {func.__name__} took {duration:.4f} seconds")
-        return result
-    return wrapper
-
-class YoloDepthSegmentationNode(Node):
+class EKFNode(Node):
 
     def __init__(self):
-        super().__init__('yolo_depth_segmentation_node')
+        super().__init__('EKF_node')
         
         
 
@@ -81,15 +72,36 @@ class YoloDepthSegmentationNode(Node):
         self.camera_info = None
         self.depth_image = None
         self.bounding_boxes = []
+
+        # 初始化 Kalman 滤波器 (6D: x, y, z, roll, pitch, yaw)
+        self.kf = KalmanFilter(dim_x=6, dim_z=6)
+        
+        # 状态转移矩阵 (假设无加速度，只有位置变化)
+        self.kf.F = np.eye(6)  
+
+        # 观测矩阵 (直接观测 x, y, z, roll, pitch, yaw)
+        self.kf.H = np.eye(6)
+
+        # 状态协方差矩阵
+        self.kf.P *= 100  # 初始不确定性较高
+        
+        # 过程噪声协方差
+        self.kf.Q *= 0.1
+
+        # 观测噪声协方差 (减少抖动)
+        self.kf.R *= 0.5
+
+        # 初始状态
+        self.kf.x = np.zeros((6, 1))
         
     def camera_info_callback(self, msg):
         # Store the camera info message for later use
         self.camera_info = msg
     
-    @timing_decorator
+
     def depth_image_callback(self, msg):
         # Convert the ROS Image message to an OpenCV image
-        # start_time = time.time()
+     
         self.depth_image = self.bridge.imgmsg_to_cv2(img_msg=msg, desired_encoding='passthrough')
         if self.camera_info is None:
             self.get_logger().warn('Camera info is not received yet.')
@@ -106,13 +118,9 @@ class YoloDepthSegmentationNode(Node):
         self.depth_image = cv2.remap(self.depth_image, map1, map2, interpolation=cv2.INTER_NEAREST)
         
         self.frame_id = msg.header.frame_id
-        # end_time = time.time()
-        # self.get_logger().info(f"Depth image processing time: {end_time - start_time:.4f} seconds")
 
-    @timing_decorator
+    
     def inference_callback(self, msg):
-
-        # start_time = time.time()
         # Store the bounding boxes from the Yolov8 Inference message
         self.bounding_boxes = msg.yolov8_inference
         
@@ -138,15 +146,12 @@ class YoloDepthSegmentationNode(Node):
                 
                 # Transform the filtered depth mask into a 3D bounding box and publish as a marker
                 self.publish_3d_marker(filtered_image, top, left, class_name, confidence)
-        # end_time = time.time()
-        # self.get_logger().info(f"[Timing] inference_callback total took: {end_time - start_time:.4f} seconds")
-    
-    @timing_decorator
+
+        
     def apply_cumulative_hist_depth_filter(self, depth_image, ignore_background = False, resolution = 10, max_height_percent = 5 ):
         # Flatten the depth image to analyze the depth values
         # depth_values = depth_image.flatten()
         # depth_values = depth_values[np.isfinite(depth_values)] # Exclude zero (no data) values
-        # start_time = time.time()
         MIN_DEPTH = 500  # 最小检测距离 (根据模式调整)
         MAX_DEPTH = 3860  # 最大检测距离 (根据模式调整)
 
@@ -207,8 +212,6 @@ class YoloDepthSegmentationNode(Node):
 
             # Apply the mask to the depth image
             filtered_image = np.where(mask, depth_image, 0)
-            # end_time = time.time()
-            # self.get_logger().info(f"[Timing] apply_cumulative_hist_depth_filter took {end_time - start_time:.4f} seconds")
 
             return filtered_image
 
@@ -226,6 +229,17 @@ class YoloDepthSegmentationNode(Node):
         element_count = np.sum(hist[left_edge:right_edge+1])
 
         return left_edge, right_edge, element_count
+    def calculate_center(self, x, y, z):
+        """ 计算 3D 目标框的中心点 """
+      
+        # 计算 3D 中心点
+        central_x = float(np.mean(x))
+        central_y = float(np.mean(y))
+        central_z = float(np.mean(z))
+
+        return central_x, central_y, central_z
+    
+    
 
     def calculate_orientation_from_bbox(self, min_x, z_min_x, x_min_z, min_z):
         # Calculate the angle (theta) in the XZ plane
@@ -240,27 +254,36 @@ class YoloDepthSegmentationNode(Node):
 
         return quaternion
     
-    @timing_decorator
+    def calculate_bbox_size(self, x, y, z):
+    # 获取非零深度值的坐标
+        
+        # 计算尺寸（X, Y, Z 方向上的范围）
+        size_x = float(np.max(x) - np.min(x))
+        size_y = float(np.max(y) - np.min(y))
+        size_z = float(np.max(z) - np.min(z))
+
+        return size_x, size_y, size_z
+
+
     def publish_3d_marker(self, filtered_image, top, left, class_name, conf):
-        # start_time = time.time()
         if filtered_image is None or self.camera_info is None:
             return 
         
-        # Intrinsic parameters
+        # # Intrinsic parameters
         self.camera_info.k = np.array(self.new_camera_matrix).reshape(self.camera_info.k.shape)
         fx = self.camera_info.k[0]
         fy = self.camera_info.k[4]
         cx = self.camera_info.k[2]
         cy = self.camera_info.k[5]
 
-        # Get the non-zero depth values and their coordinates
+        # # Get the non-zero depth values and their coordinates
         depth_values = filtered_image[filtered_image > 0]
         coords = np.column_stack(np.where(filtered_image > 0))
 
         if len(depth_values) == 0:
             return
 
-        # Convert pixel coordinates to 3D world coordinates
+        # # Convert pixel coordinates to 3D world coordinates
         z = depth_values / 1000# Assuming depth is in millimeters
         x = (coords[:, 1] + left - cx) * z / fx
         y = (coords[:, 0] + top - cy) * z / fy
@@ -277,22 +300,42 @@ class YoloDepthSegmentationNode(Node):
         min_z_index = np.argmin(z)
         x_min_z = x[min_z_index]  # Corresponding X value for min_z
         
-        # Set the marker's position (center of the bounding box)
-        central_x = (min_x + max_x) / 2.0
-        central_y = (min_y + max_y) / 2.0
-        central_z = (min_z + max_z) / 2.0
+        # # Set the marker's position (center of the bounding box)
+        # central_x = (min_x + max_x) / 2.0
+        # central_y = (min_y + max_y) / 2.0
+        # central_z = (min_z + max_z) / 2.0
         
+        # 计算 3D 目标框的中心点
+        central_x, central_y, central_z = self.calculate_center(filtered_image, top, left, x, y, z)
+
+        # 计算四元数
+        quaternion =  self.calculate_orientation_from_bbox(min_x, z_min_x, x_min_z, min_z)
+
+        # 将姿态转换为欧拉角
+        roll, pitch, yaw = tf.euler_from_quaternion(quaternion)
+
+        # **应用 Kalman 滤波**
+        measured_state = np.array([[central_x], [central_y], [central_z], [roll], [pitch], [yaw]])
+        self.kf.predict()  # 预测
+        self.kf.update(measured_state)  # 更新
+
+        # 获取滤波后的值
+        filtered_x, filtered_y, filtered_z, filtered_roll, filtered_pitch, filtered_yaw = self.kf.x.flatten()
+
+        # **将欧拉角转换回四元数**
+        filtered_quaternion = tf.quaternion_from_euler(filtered_roll, filtered_pitch, filtered_yaw)
+
         # Create the Pose object for transformation
         pose = Pose()
-        pose.position.x = central_x
-        pose.position.y = central_y
-        pose.position.z = central_z
+        pose.position.x = filtered_x
+        pose.position.y = filtered_y
+        pose.position.z = filtered_z
         
-        quaternion =  self.calculate_orientation_from_bbox(min_x, z_min_x, x_min_z, min_z)
-        pose.orientation.x = quaternion[0]
-        pose.orientation.y = quaternion[1]
-        pose.orientation.z = quaternion[2]
-        pose.orientation.w = quaternion[3]
+        #quaternion =  self.calculate_orientation_from_bbox(min_x, z_min_x, x_min_z, min_z)
+        pose.orientation.x = filtered_quaternion[0]
+        pose.orientation.y = filtered_quaternion[1]
+        pose.orientation.z = filtered_quaternion[2]
+        pose.orientation.w = filtered_quaternion[3]
         
         # Create an instance of the BoundingBox3D message
         bounding_box_msg = BoundingBox3D()
@@ -304,18 +347,19 @@ class YoloDepthSegmentationNode(Node):
         
         # Populate the size (width, height, depth)
         size = Vector3()
-        size.x = float(max_x - min_x)  # width
-        size.y = float(max_y - min_y)  # height
-        size.z = float(max_z - min_z)  # depth
+        # size.x = float(max_x - min_x)  # width
+        # size.y = float(max_y - min_y)  # height
+        # size.z = float(max_z - min_z)  # depth
+        size.x, size.y, size.z = self.calculate_bbox_size(filtered_x, filtered_y, filtered_z)
+
+
         bounding_box_msg.size = size
         
         # Set the frame_id
         bounding_box_msg.frame_id = self.frame_id # Example frame ID
         # Publish the message
         self.publisher_.publish(bounding_box_msg)
-        # end_time = time.time()
-        # self.get_logger().info(f"[Timing] publish_3d_marker took {end_time - start_time:.4f} seconds")
-        
+            
 
     def visualize_depth_image(self, depth_image, window_name):
         # Normalize the depth image to the range [0, 255] for visualization
@@ -331,7 +375,7 @@ class YoloDepthSegmentationNode(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = YoloDepthSegmentationNode()
+    node = EKFNode()
     rclpy.spin(node)
     rclpy.shutdown()
 

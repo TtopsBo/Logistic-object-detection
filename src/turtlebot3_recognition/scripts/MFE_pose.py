@@ -24,6 +24,8 @@ from sensor_msgs.msg import Image, CameraInfo
 from geometry_msgs.msg import Quaternion, Pose, Vector3
 from turtlebot3_recognition.msg import Yolov8Inference, BoundingBox3D
 
+import open3d as o3d
+
 import cv2
 import numpy as np
 from cv_bridge import CvBridge
@@ -40,10 +42,10 @@ def timing_decorator(func):
         return result
     return wrapper
 
-class YoloDepthSegmentationNode(Node):
+class MFENode(Node):
 
     def __init__(self):
-        super().__init__('yolo_depth_segmentation_node')
+        super().__init__('MFE_node')
         
         
 
@@ -74,6 +76,12 @@ class YoloDepthSegmentationNode(Node):
             10
         )
         
+        self.subscription = self.create_subscription(
+            Image,
+            '/rgb/image_rect_color',
+            self.camera_callback,
+            10)
+        
         # Publisher for the 3D bounding box
         self.publisher_ = self.create_publisher(BoundingBox3D, '/bounding_boxes_3d', 10)
 
@@ -85,6 +93,42 @@ class YoloDepthSegmentationNode(Node):
     def camera_info_callback(self, msg):
         # Store the camera info message for later use
         self.camera_info = msg
+
+    def camera_callback(self, msg):
+        self.rgb_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
+
+    @timing_decorator
+    def estimate_manhattan_frame(self, rgb_crop, depth_crop, intrinsics_crop):
+        rgb_crop = np.ascontiguousarray(rgb_crop)
+        depth_crop = np.ascontiguousarray(depth_crop)
+
+        color_o3d = o3d.geometry.Image(rgb_crop)
+        depth_o3d = o3d.geometry.Image(depth_crop.astype(np.uint16))
+
+        rgbd = o3d.geometry.RGBDImage.create_from_color_and_depth(
+            color_o3d, depth_o3d,
+            depth_scale=1000.0,
+            depth_trunc=3.0,
+            convert_rgb_to_intensity=False
+        )
+
+        pcd = o3d.geometry.PointCloud.create_from_rgbd_image(rgbd, intrinsics_crop)
+        pcd.estimate_normals(search_param=o3d.geometry.KDTreeSearchParamKNN(knn=30))
+        pcd.orient_normals_consistent_tangent_plane(k=30)
+
+        normals = []
+        pcd_copy = pcd
+
+        for _ in range(3):
+            plane_model, inliers = pcd_copy.segment_plane(distance_threshold=0.01, ransac_n=3, num_iterations=1000)
+            normal = np.array(plane_model[:3])
+            normals.append(normal)
+            pcd_copy = pcd_copy.select_by_index(inliers, invert=True)
+
+        U, _, _ = np.linalg.svd(np.array(normals).T)
+        R = U  # Estimated Manhattan Frame (rotation matrix)
+
+        return R
     
     @timing_decorator
     def depth_image_callback(self, msg):
@@ -109,6 +153,18 @@ class YoloDepthSegmentationNode(Node):
         # end_time = time.time()
         # self.get_logger().info(f"Depth image processing time: {end_time - start_time:.4f} seconds")
 
+    def crop_intrinsics(self, intr, x1, y1):
+        intr_crop = o3d.camera.PinholeCameraIntrinsic()
+        intr_crop.set_intrinsics(
+            width=int(self.depth_image.shape[1] - x1),
+            height=int(self.depth_image.shape[0] - y1),
+            fx=intr[0, 0],
+            fy=intr[1, 1],
+            cx=intr[0, 2] - x1,
+            cy=intr[1, 2] - y1,
+        )
+        return intr_crop
+    
     @timing_decorator
     def inference_callback(self, msg):
 
@@ -126,6 +182,15 @@ class YoloDepthSegmentationNode(Node):
                 class_name = box.class_name
                 confidence = box.conf
                 
+                # 你需要裁剪 RGB 图像（额外添加 RGB 图像订阅并缓存 self.rgb_image）
+                rgb_crop = self.rgb_image[top:bottom, left:right]
+
+                # 构建 crop 后的内参
+                intr_crop = self.crop_intrinsics(self.new_camera_matrix, left, top)
+
+                # 估计曼哈顿框旋转矩阵
+                
+
                 # Visualize depth image with BB for debugging
                 # cv2.rectangle(self.depth_image, (left, top), (right, bottom), (0, 255, 0), 2)
                 # self.visualize_depth_image(self.depth_image, 'Full Depth Image')
@@ -133,11 +198,15 @@ class YoloDepthSegmentationNode(Node):
                 # Apply depth filtering
                 filtered_image = self.apply_cumulative_hist_depth_filter(cropped_depth_image)
                 
+                R = self.estimate_manhattan_frame(rgb_crop, filtered_image, intr_crop)
+
+                # 发布 3D marker
+                self.publish_3d_marker(filtered_image, top, left, class_name, confidence, rotation_matrix=R)
                 # Display the filtered depth image for debugging
                 # self.visualize_depth_image(filtered_image, 'Filtered Depth Image')
                 
                 # Transform the filtered depth mask into a 3D bounding box and publish as a marker
-                self.publish_3d_marker(filtered_image, top, left, class_name, confidence)
+                # self.publish_3d_marker(filtered_image, top, left, class_name, confidence)
         # end_time = time.time()
         # self.get_logger().info(f"[Timing] inference_callback total took: {end_time - start_time:.4f} seconds")
     
@@ -241,7 +310,7 @@ class YoloDepthSegmentationNode(Node):
         return quaternion
     
     @timing_decorator
-    def publish_3d_marker(self, filtered_image, top, left, class_name, conf):
+    def publish_3d_marker(self, filtered_image, top, left, class_name, conf, rotation_matrix):
         # start_time = time.time()
         if filtered_image is None or self.camera_info is None:
             return 
@@ -288,7 +357,10 @@ class YoloDepthSegmentationNode(Node):
         pose.position.y = central_y
         pose.position.z = central_z
         
-        quaternion =  self.calculate_orientation_from_bbox(min_x, z_min_x, x_min_z, min_z)
+        
+        transformation_matrix = np.eye(4)
+        transformation_matrix[:3, :3] = rotation_matrix
+        quaternion = tf.quaternion_from_matrix(transformation_matrix)
         pose.orientation.x = quaternion[0]
         pose.orientation.y = quaternion[1]
         pose.orientation.z = quaternion[2]
@@ -331,7 +403,7 @@ class YoloDepthSegmentationNode(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = YoloDepthSegmentationNode()
+    node = MFENode()
     rclpy.spin(node)
     rclpy.shutdown()
 
