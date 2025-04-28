@@ -29,7 +29,16 @@ import numpy as np
 from cv_bridge import CvBridge
 import tf_transformations as tf
 from filterpy.kalman import KalmanFilter
+import time
 
+def timing_decorator(func):
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        duration = time.time() - start_time
+        args[0].get_logger().info(f"[Timing] {func.__name__} took {duration:.4f} seconds")
+        return result
+    return wrapper
 
 class EKFNode(Node):
 
@@ -98,7 +107,7 @@ class EKFNode(Node):
         # Store the camera info message for later use
         self.camera_info = msg
     
-
+    @timing_decorator
     def depth_image_callback(self, msg):
         # Convert the ROS Image message to an OpenCV image
      
@@ -119,7 +128,7 @@ class EKFNode(Node):
         
         self.frame_id = msg.header.frame_id
 
-    
+    @timing_decorator
     def inference_callback(self, msg):
         # Store the bounding boxes from the Yolov8 Inference message
         self.bounding_boxes = msg.yolov8_inference
@@ -147,7 +156,7 @@ class EKFNode(Node):
                 # Transform the filtered depth mask into a 3D bounding box and publish as a marker
                 self.publish_3d_marker(filtered_image, top, left, class_name, confidence)
 
-        
+    @timing_decorator
     def apply_cumulative_hist_depth_filter(self, depth_image, ignore_background = False, resolution = 10, max_height_percent = 5 ):
         # Flatten the depth image to analyze the depth values
         # depth_values = depth_image.flatten()
@@ -157,7 +166,7 @@ class EKFNode(Node):
 
         depth_values = depth_image.flatten()
         depth_values = depth_values[(depth_values > 0) & np.isfinite(depth_values)]
-        depth_values = depth_values[(depth_values >= MIN_DEPTH) & (depth_values <= MAX_DEPTH) & np.isfinite(depth_values)]
+        #depth_values = depth_values[(depth_values >= MIN_DEPTH) & (depth_values <= MAX_DEPTH) & np.isfinite(depth_values)]
 
         if len(depth_values) == 0:
             return depth_image
@@ -264,7 +273,7 @@ class EKFNode(Node):
 
         return size_x, size_y, size_z
 
-
+    @timing_decorator
     def publish_3d_marker(self, filtered_image, top, left, class_name, conf):
         if filtered_image is None or self.camera_info is None:
             return 
@@ -306,7 +315,7 @@ class EKFNode(Node):
         # central_z = (min_z + max_z) / 2.0
         
         # 计算 3D 目标框的中心点
-        central_x, central_y, central_z = self.calculate_center(filtered_image, top, left, x, y, z)
+        central_x, central_y, central_z = self.calculate_center(x, y, z)
 
         # 计算四元数
         quaternion =  self.calculate_orientation_from_bbox(min_x, z_min_x, x_min_z, min_z)
@@ -350,7 +359,7 @@ class EKFNode(Node):
         # size.x = float(max_x - min_x)  # width
         # size.y = float(max_y - min_y)  # height
         # size.z = float(max_z - min_z)  # depth
-        size.x, size.y, size.z = self.calculate_bbox_size(filtered_x, filtered_y, filtered_z)
+        size.x, size.y, size.z = self.calculate_bbox_size(x, y, z)
 
 
         bounding_box_msg.size = size

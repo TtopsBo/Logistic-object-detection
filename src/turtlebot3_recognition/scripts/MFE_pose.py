@@ -89,7 +89,9 @@ class MFENode(Node):
         self.camera_info = None
         self.depth_image = None
         self.bounding_boxes = []
-        
+        self.rgb_image = None
+        self.new_camera_matrix = None
+
     def camera_info_callback(self, msg):
         # Store the camera info message for later use
         self.camera_info = msg
@@ -97,39 +99,6 @@ class MFENode(Node):
     def camera_callback(self, msg):
         self.rgb_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
 
-    @timing_decorator
-    def estimate_manhattan_frame(self, rgb_crop, depth_crop, intrinsics_crop):
-        rgb_crop = np.ascontiguousarray(rgb_crop)
-        depth_crop = np.ascontiguousarray(depth_crop)
-
-        color_o3d = o3d.geometry.Image(rgb_crop)
-        depth_o3d = o3d.geometry.Image(depth_crop.astype(np.uint16))
-
-        rgbd = o3d.geometry.RGBDImage.create_from_color_and_depth(
-            color_o3d, depth_o3d,
-            depth_scale=1000.0,
-            depth_trunc=3.0,
-            convert_rgb_to_intensity=False
-        )
-
-        pcd = o3d.geometry.PointCloud.create_from_rgbd_image(rgbd, intrinsics_crop)
-        pcd.estimate_normals(search_param=o3d.geometry.KDTreeSearchParamKNN(knn=30))
-        pcd.orient_normals_consistent_tangent_plane(k=30)
-
-        normals = []
-        pcd_copy = pcd
-
-        for _ in range(3):
-            plane_model, inliers = pcd_copy.segment_plane(distance_threshold=0.01, ransac_n=3, num_iterations=1000)
-            normal = np.array(plane_model[:3])
-            normals.append(normal)
-            pcd_copy = pcd_copy.select_by_index(inliers, invert=True)
-
-        U, _, _ = np.linalg.svd(np.array(normals).T)
-        R = U  # Estimated Manhattan Frame (rotation matrix)
-
-        return R
-    
     @timing_decorator
     def depth_image_callback(self, msg):
         # Convert the ROS Image message to an OpenCV image
@@ -153,6 +122,53 @@ class MFENode(Node):
         # end_time = time.time()
         # self.get_logger().info(f"Depth image processing time: {end_time - start_time:.4f} seconds")
 
+    @timing_decorator
+    def estimate_manhattan_frame(self, rgb_crop, depth_crop, intrinsics_crop):
+        rgb_crop = np.ascontiguousarray(rgb_crop)
+        depth_crop = np.ascontiguousarray(depth_crop)
+
+        color_o3d = o3d.geometry.Image(rgb_crop)
+        depth_o3d = o3d.geometry.Image(depth_crop.astype(np.uint16))
+
+        rgbd = o3d.geometry.RGBDImage.create_from_color_and_depth(
+            color_o3d, depth_o3d,
+            depth_scale=1000.0,
+            depth_trunc=7.0,
+            convert_rgb_to_intensity=False
+        )
+       
+        pcd = o3d.geometry.PointCloud.create_from_rgbd_image(rgbd, intrinsics_crop)
+        for _ in range(3):
+            if len(pcd.points) < 10:
+                self.get_logger().warn("Too few points in point cloud to estimate normals. Skipping.")
+                return np.eye(3)
+
+            try:
+                pcd.estimate_normals(
+                    search_param=o3d.geometry.KDTreeSearchParamHybrid(radius=0.05, max_nn=30)
+                )
+                pcd.orient_normals_consistent_tangent_plane(k=30)
+            except Exception as e:
+                self.get_logger().warn(f"[Normal Orientation Error] {e}. Using identity matrix fallback.")
+                return np.eye(3)
+
+
+        normals = []
+        pcd_copy = pcd
+
+        for _ in range(3):
+            plane_model, inliers = pcd_copy.segment_plane(distance_threshold=0.01, ransac_n=3, num_iterations=1000)
+            normal = np.array(plane_model[:3])
+            normals.append(normal)
+            pcd_copy = pcd_copy.select_by_index(inliers, invert=True)
+
+        U, _, _ = np.linalg.svd(np.array(normals).T)
+        R = U  # Estimated Manhattan Frame (rotation matrix)
+
+        return R
+    
+    
+
     def crop_intrinsics(self, intr, x1, y1):
         intr_crop = o3d.camera.PinholeCameraIntrinsic()
         intr_crop.set_intrinsics(
@@ -167,7 +183,12 @@ class MFENode(Node):
     
     @timing_decorator
     def inference_callback(self, msg):
-
+        if self.new_camera_matrix is None:
+            self.get_logger().warn("new_camera_matrix not yet initialized. Skipping this frame.")
+            return
+        if self.rgb_image is None:
+            self.get_logger().warn("RGB image not yet received. Skipping this frame.")
+            return
         # start_time = time.time()
         # Store the bounding boxes from the Yolov8 Inference message
         self.bounding_boxes = msg.yolov8_inference

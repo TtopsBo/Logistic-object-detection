@@ -152,7 +152,7 @@ class YoloDepthSegmentationNode(Node):
 
         depth_values = depth_image.flatten()
         depth_values = depth_values[(depth_values > 0) & np.isfinite(depth_values)]
-        depth_values = depth_values[(depth_values >= MIN_DEPTH) & (depth_values <= MAX_DEPTH) & np.isfinite(depth_values)]
+        #depth_values = depth_values[(depth_values >= MIN_DEPTH) & (depth_values <= MAX_DEPTH) & np.isfinite(depth_values)]
 
         if len(depth_values) == 0:
             return depth_image

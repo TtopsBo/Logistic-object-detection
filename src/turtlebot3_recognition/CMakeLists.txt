@@ -62,6 +62,7 @@ install(
   launch/launch_3d_node.launch.py
   launch/launch_EKF_node.launch.py
   launch/launch_MFE_node.launch.py
+  launch/launch_3d_bb.launch.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -1,0 +1,1 @@
+Invoking command in '/home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/boyan/ros2_ws/src/Logistic-object-detection/src/turtlebot3_gazebo -DCMAKE_INSTALL_PREFIX=/home/boyan/ros2_ws/src/Logistic-object-detection/install/turtlebot3_gazebo

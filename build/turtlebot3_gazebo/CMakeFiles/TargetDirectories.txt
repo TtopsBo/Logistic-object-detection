@@ -1,0 +1,9 @@
+/home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_gazebo/CMakeFiles/uninstall.dir
+/home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_gazebo/CMakeFiles/turtlebot3_gazebo_uninstall.dir
+/home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_gazebo/CMakeFiles/test.dir
+/home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_gazebo/CMakeFiles/edit_cache.dir
+/home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_gazebo/CMakeFiles/rebuild_cache.dir
+/home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_gazebo/CMakeFiles/list_install_components.dir
+/home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_gazebo/CMakeFiles/install.dir
+/home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_gazebo/CMakeFiles/install/local.dir
+/home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_gazebo/CMakeFiles/install/strip.dir

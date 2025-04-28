@@ -1,0 +1,5 @@
+[0.020s] Invoking command in '/home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_recognition': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_recognition -- -j20 -l20
+[0.027s] [0mCMake Error: The current CMakeCache.txt directory /home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_recognition/CMakeCache.txt is different than the directory /home/tumwfml-ubunt6/ros2_ws/src/turtlebot3_ws/build/turtlebot3_recognition where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.029s] gmake: /home/tumwfml-ubunt6/.local/lib/python3.10/site-packages/cmake/data/bin/cmake: No such file or directory
+[0.029s] gmake: *** [Makefile:226: cmake_check_build_system] Error 127
+[0.031s] Invoked command in '/home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_recognition' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_recognition -- -j20 -l20

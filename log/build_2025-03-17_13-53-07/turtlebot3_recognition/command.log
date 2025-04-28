@@ -1,0 +1,2 @@
+Invoking command in '/home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_recognition': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_recognition -- -j20 -l20
+Invoked command in '/home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_recognition' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/boyan/ros2_ws/src/Logistic-object-detection/build/turtlebot3_recognition -- -j20 -l20
