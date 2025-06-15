@@ -1,0 +1,570 @@
+s per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 pallet, 4.3ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 4.3ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 3.7ms
+[yolov8_ros2_pt.py-1] Speed: 1.8ms preprocess, 3.7ms inference, 0.6ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 4.3ms
+[yolov8_ros2_pt.py-1] Speed: 1.3ms preprocess, 4.3ms inference, 1.2ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 2 pallets, 4.0ms
+[yolov8_ros2_pt.py-1] Speed: 1.3ms preprocess, 4.0ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.0ms
+[yolov8_ros2_pt.py-1] Speed: 1.3ms preprocess, 4.0ms inference, 0.3ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 1 pallet, 4.4ms
+[yolov8_ros2_pt.py-1] Speed: 1.6ms preprocess, 4.4ms inference, 1.0ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 1 pallet, 4.4ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 4.4ms inference, 0.8ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 1 small_load_carrier, 4.3ms
+[yolov8_ros2_pt.py-1] Speed: 2.0ms preprocess, 4.3ms inference, 2.5ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 pallet, 4.4ms
+[yolov8_ros2_pt.py-1] Speed: 1.6ms preprocess, 4.4ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.6ms
+[yolov8_ros2_pt.py-1] Speed: 1.9ms preprocess, 4.6ms inference, 0.3ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 4.5ms
+[yolov8_ros2_pt.py-1] Speed: 1.5ms preprocess, 4.5ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.1ms
+[yolov8_ros2_pt.py-1] Speed: 1.3ms preprocess, 4.1ms inference, 0.3ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 pallet, 5.2ms
+[yolov8_ros2_pt.py-1] Speed: 2.3ms preprocess, 5.2ms inference, 2.0ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 pallet, 4.3ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 4.3ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 1 pallet, 4.4ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 4.4ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 1 pallet, 4.8ms
+[yolov8_ros2_pt.py-1] Speed: 2.2ms preprocess, 4.8ms inference, 8.2ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 pallet, 5.7ms
+[yolov8_ros2_pt.py-1] Speed: 2.1ms preprocess, 5.7ms inference, 1.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 2 pallets, 10.9ms
+[yolov8_ros2_pt.py-1] Speed: 1.8ms preprocess, 10.9ms inference, 1.3ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 pallet, 4.4ms
+[yolov8_ros2_pt.py-1] Speed: 2.0ms preprocess, 4.4ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 pallet, 4.0ms
+[yolov8_ros2_pt.py-1] Speed: 1.3ms preprocess, 4.0ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 5.0ms
+[yolov8_ros2_pt.py-1] Speed: 1.8ms preprocess, 5.0ms inference, 1.3ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 pallet, 4.2ms
+[yolov8_ros2_pt.py-1] Speed: 1.3ms preprocess, 4.2ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 1 pallet, 1 small_load_carrier, 4.6ms
+[yolov8_ros2_pt.py-1] Speed: 1.3ms preprocess, 4.6ms inference, 0.9ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 pallet, 4.0ms
+[yolov8_ros2_pt.py-1] Speed: 1.6ms preprocess, 4.0ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 pallet, 5.6ms
+[yolov8_ros2_pt.py-1] Speed: 1.5ms preprocess, 5.6ms inference, 9.0ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 pallet, 3.9ms
+[yolov8_ros2_pt.py-1] Speed: 1.7ms preprocess, 3.9ms inference, 0.6ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 1 pallet, 4.4ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 4.4ms inference, 0.8ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 1 pallet, 1 pallet_truck, 4.1ms
+[yolov8_ros2_pt.py-1] Speed: 1.5ms preprocess, 4.1ms inference, 0.8ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 2 forklifts, 1 pallet, 4.4ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 4.4ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 4.5ms
+[yolov8_ros2_pt.py-1] Speed: 2.0ms preprocess, 4.5ms inference, 2.1ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 2 forklifts, 4.3ms
+[yolov8_ros2_pt.py-1] Speed: 1.5ms preprocess, 4.3ms inference, 0.8ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 4.4ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 4.4ms inference, 0.8ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.2ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 4.2ms inference, 0.3ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 3.6ms
+[yolov8_ros2_pt.py-1] Speed: 1.5ms preprocess, 3.6ms inference, 0.6ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 4.8ms
+[yolov8_ros2_pt.py-1] Speed: 1.5ms preprocess, 4.8ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 pallet, 5.0ms
+[yolov8_ros2_pt.py-1] Speed: 2.0ms preprocess, 5.0ms inference, 6.8ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 4.2ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 4.2ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 4.6ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 4.6ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 4.1ms
+[yolov8_ros2_pt.py-1] Speed: 1.9ms preprocess, 4.1ms inference, 2.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 1 pallet, 5.5ms
+[yolov8_ros2_pt.py-1] Speed: 2.3ms preprocess, 5.5ms inference, 3.0ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 1 pallet, 4.2ms
+[yolov8_ros2_pt.py-1] Speed: 1.5ms preprocess, 4.2ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 pallet_truck, 3.9ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 3.9ms inference, 0.6ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 4.5ms
+[yolov8_ros2_pt.py-1] Speed: 1.3ms preprocess, 4.5ms inference, 1.1ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.2ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 4.2ms inference, 0.3ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 3.9ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 3.9ms inference, 0.4ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 5.5ms
+[yolov8_ros2_pt.py-1] Speed: 1.9ms preprocess, 5.5ms inference, 3.8ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 pallet_truck, 3.9ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 3.9ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 pallet_truck, 4.1ms
+[yolov8_ros2_pt.py-1] Speed: 1.3ms preprocess, 4.1ms inference, 0.6ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 3.7ms
+[yolov8_ros2_pt.py-1] Speed: 1.3ms preprocess, 3.7ms inference, 0.3ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 3.8ms
+[yolov8_ros2_pt.py-1] Speed: 1.2ms preprocess, 3.8ms inference, 0.3ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.3ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 4.3ms inference, 0.4ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.2ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 4.2ms inference, 0.6ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.0ms
+[yolov8_ros2_pt.py-1] Speed: 1.8ms preprocess, 4.0ms inference, 0.3ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.3ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 4.3ms inference, 0.3ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 pallet, 5.8ms
+[yolov8_ros2_pt.py-1] Speed: 1.5ms preprocess, 5.8ms inference, 3.3ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.3ms
+[yolov8_ros2_pt.py-1] Speed: 1.8ms preprocess, 4.3ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.1ms
+[yolov8_ros2_pt.py-1] Speed: 1.3ms preprocess, 4.1ms inference, 0.3ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 pallet, 4.0ms
+[yolov8_ros2_pt.py-1] Speed: 1.3ms preprocess, 4.0ms inference, 0.6ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.5ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 4.5ms inference, 0.4ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 small_load_carrier, 4.4ms
+[yolov8_ros2_pt.py-1] Speed: 2.2ms preprocess, 4.4ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.1ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 4.1ms inference, 0.3ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 small_load_carrier, 4.5ms
+[yolov8_ros2_pt.py-1] Speed: 1.9ms preprocess, 4.5ms inference, 0.8ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 forklift, 1 pallet, 4.4ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 4.4ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 1 pallet_truck, 3.8ms
+[yolov8_ros2_pt.py-1] Speed: 1.2ms preprocess, 3.8ms inference, 0.7ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.5ms
+[yolov8_ros2_pt.py-1] Speed: 1.5ms preprocess, 4.5ms inference, 0.4ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.2ms
+[yolov8_ros2_pt.py-1] Speed: 1.3ms preprocess, 4.2ms inference, 0.3ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.3ms
+[yolov8_ros2_pt.py-1] Speed: 1.5ms preprocess, 4.3ms inference, 0.4ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.2ms
+[yolov8_ros2_pt.py-1] Speed: 1.4ms preprocess, 4.2ms inference, 0.4ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.1ms
+[yolov8_ros2_pt.py-1] Speed: 1.7ms preprocess, 4.1ms inference, 0.3ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.2ms
+[yolov8_ros2_pt.py-1] Speed: 1.8ms preprocess, 4.2ms inference, 0.3ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.6ms
+[yolov8_ros2_pt.py-1] Speed: 1.6ms preprocess, 4.6ms inference, 0.3ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.4ms
+[yolov8_ros2_pt.py-1] Speed: 1.7ms preprocess, 4.4ms inference, 1.1ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.9ms
+[yolov8_ros2_pt.py-1] Speed: 1.7ms preprocess, 4.9ms inference, 0.4ms postprocess per image at shape (1, 3, 384, 640)
+[yolov8_ros2_pt.py-1] 
+[yolov8_ros2_pt.py-1] 0: 384x640 (no detections), 4.1ms
+[yolov8_ros2_pt.py-1] Speed: 1.5ms preprocess, 4.1ms inference, 0.3ms postprocess per image at shape (1, 3, 384, 640)
+
+
+
+
+///
+
+
+
+[yolo_depth_segmentation.py-1] [INFO] [1745325446.138839666] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325446.206629718] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0016 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325446.275848046] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325446.352866128] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0000 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325446.374231560] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0018 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325446.455833496] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0016 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325446.549398536] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325446.614015873] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0016 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325446.668159645] [yolo_depth_segmentation]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325446.668725203] [yolo_depth_segmentation]: [Timing] publish_3d_marker took 0.0003 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325446.668890807] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0010 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325446.708690666] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325446.792175372] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325446.884967470] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325446.952389841] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.009897127] [yolo_depth_segmentation]: [Timing] apply_cumulative_hist_depth_filter took 0.0002 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.010592258] [yolo_depth_segmentation]: [Timing] publish_3d_marker took 0.0004 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.010758091] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0012 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.051716180] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0020 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.123284301] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0021 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.207262978] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.280825759] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0019 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.337991112] [yolo_depth_segmentation]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.338570595] [yolo_depth_segmentation]: [Timing] publish_3d_marker took 0.0003 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.338739437] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0010 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.380593871] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.466679537] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0016 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.548271735] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0016 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.638976393] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0016 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.670648357] [yolo_depth_segmentation]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.671263340] [yolo_depth_segmentation]: [Timing] publish_3d_marker took 0.0004 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.671439943] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0011 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.707670652] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0023 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.801966877] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.905847168] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325447.993769432] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0016 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325448.067999157] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325448.136460868] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0016 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325448.178927176] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0000 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325448.230632686] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0039 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325448.310394922] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0016 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325448.396346541] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0019 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325448.481668552] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0023 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325448.564407119] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325448.663947971] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0020 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325448.670446847] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0000 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325448.737304298] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0023 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325448.833210089] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0014 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325448.899680223] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325448.994833663] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325449.069162439] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0021 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325449.104781687] [yolo_depth_segmentation]: [Timing] apply_cumulative_hist_depth_filter took 0.0002 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325449.105373555] [yolo_depth_segmentation]: [Timing] publish_3d_marker took 0.0004 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325449.105528451] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0011 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325449.150601668] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325449.245890616] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0016 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325449.318766607] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0024 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325449.403397859] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0022 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325449.483707169] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325449.524351364] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0000 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325449.570123190] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0014 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325449.647466631] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325449.741348981] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0022 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325449.777430339] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0000 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325449.815952756] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325449.920171964] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0018 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325449.993739537] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325450.026111844] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0000 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325450.082553315] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325450.166821507] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0019 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325450.249140342] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0018 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325450.354093093] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325450.413318560] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325450.498919519] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0024 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325450.529215475] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0000 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325450.581124605] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325450.665512134] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0021 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325450.749193992] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0016 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325450.843143135] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0019 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325450.938454842] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0016 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325450.993436510] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0019 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325451.086077764] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325451.116410546] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0000 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325451.158757957] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0021 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325451.251512949] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325451.335481127] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0019 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325451.404472845] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0020 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325451.461020121] [yolo_depth_segmentation]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325451.461574894] [yolo_depth_segmentation]: [Timing] publish_3d_marker took 0.0003 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325451.461731052] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0010 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325451.500168857] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0018 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325451.571572656] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0014 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325451.653347688] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0016 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325451.680444336] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0000 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325451.740246415] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325451.825478995] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325451.900151141] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325452.002037881] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0014 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325452.071810611] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325452.146303427] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0020 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325452.198522110] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0000 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325452.234170308] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325452.332049744] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0022 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325452.403371080] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0021 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325452.491825450] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0019 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325452.559447608] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325452.627463056] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0000 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325452.647755269] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0022 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325452.727544940] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0025 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325452.817332539] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0016 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325452.888461134] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0019 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325452.933689865] [yolo_depth_segmentation]: [Timing] apply_cumulative_hist_depth_filter took 0.0002 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325452.934435171] [yolo_depth_segmentation]: [Timing] publish_3d_marker took 0.0005 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325452.934691792] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0012 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325452.968581666] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325453.060969115] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0014 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325453.136614346] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0016 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325453.217933225] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325453.297450360] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325453.376823609] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0016 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325453.421739829] [yolo_depth_segmentation]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325453.422344815] [yolo_depth_segmentation]: [Timing] publish_3d_marker took 0.0004 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325453.422512720] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0010 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325453.461338289] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0023 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325453.562831968] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0014 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325453.638959081] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325453.666939717] [yolo_depth_segmentation]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325453.667496080] [yolo_depth_segmentation]: [Timing] publish_3d_marker took 0.0003 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325453.667646189] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0010 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325453.713166673] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325453.779848119] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325453.873750487] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0019 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325453.953075745] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0016 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325454.012578093] [yolo_depth_segmentation]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325454.013105905] [yolo_depth_segmentation]: [Timing] publish_3d_marker took 0.0003 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325454.013252007] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0009 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325454.031272512] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0020 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325454.111205902] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0021 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325454.191893564] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0016 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325454.233075780] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0000 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325454.275245791] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0022 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325454.355198937] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325454.443554403] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325454.526749212] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0018 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325454.568351085] [yolo_depth_segmentation]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325454.568876071] [yolo_depth_segmentation]: [Timing] publish_3d_marker took 0.0003 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325454.569036834] [yolo_depth_segmentation]: [Timing] inference_callback took 0.0009 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325454.595138240] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0015 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325454.692814409] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0017 seconds
+[yolo_depth_segmentation.py-1] [INFO] [1745325454.754345806] [yolo_depth_segmentation]: [Timing] depth_image_callback took 0.0020 seconds
+
+
+///
+
+[EKF.py-1] [INFO] [1745328077.716732990] [EKF_node]: [Timing] depth_image_callback took 0.0070 seconds
+[EKF.py-1] [INFO] [1745328077.731700423] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328077.795204064] [EKF_node]: [Timing] depth_image_callback took 0.0074 seconds
+[EKF.py-1] [INFO] [1745328077.832407671] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328077.885438437] [EKF_node]: [Timing] depth_image_callback took 0.0065 seconds
+[EKF.py-1] [INFO] [1745328077.913809629] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328077.970292590] [EKF_node]: [Timing] depth_image_callback took 0.0058 seconds
+[EKF.py-1] [INFO] [1745328078.021752025] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0002 seconds
+[EKF.py-1] [INFO] [1745328078.022403681] [EKF_node]: [Timing] publish_3d_marker took 0.0004 seconds
+[EKF.py-1] [INFO] [1745328078.022578027] [EKF_node]: [Timing] inference_callback took 0.0012 seconds
+[EKF.py-1] [INFO] [1745328078.059723403] [EKF_node]: [Timing] depth_image_callback took 0.0067 seconds
+[EKF.py-1] [INFO] [1745328078.090427208] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0002 seconds
+[EKF.py-1] [INFO] [1745328078.091310563] [EKF_node]: [Timing] publish_3d_marker took 0.0005 seconds
+[EKF.py-1] [INFO] [1745328078.091519919] [EKF_node]: [Timing] inference_callback took 0.0014 seconds
+[EKF.py-1] [INFO] [1745328078.164059222] [EKF_node]: [Timing] depth_image_callback took 0.0067 seconds
+[EKF.py-1] [INFO] [1745328078.180981702] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[EKF.py-1] [INFO] [1745328078.181619685] [EKF_node]: [Timing] publish_3d_marker took 0.0004 seconds
+[EKF.py-1] [INFO] [1745328078.181803335] [EKF_node]: [Timing] inference_callback took 0.0011 seconds
+[EKF.py-1] [INFO] [1745328078.248330543] [EKF_node]: [Timing] depth_image_callback took 0.0068 seconds
+[EKF.py-1] [INFO] [1745328078.281779980] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[EKF.py-1] [INFO] [1745328078.282425240] [EKF_node]: [Timing] publish_3d_marker took 0.0004 seconds
+[EKF.py-1] [INFO] [1745328078.282613611] [EKF_node]: [Timing] inference_callback took 0.0011 seconds
+[EKF.py-1] [INFO] [1745328078.339607094] [EKF_node]: [Timing] depth_image_callback took 0.0071 seconds
+[EKF.py-1] [INFO] [1745328078.356755426] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328078.420218506] [EKF_node]: [Timing] depth_image_callback took 0.0061 seconds
+[EKF.py-1] [INFO] [1745328078.453503028] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0002 seconds
+[EKF.py-1] [INFO] [1745328078.454143426] [EKF_node]: [Timing] publish_3d_marker took 0.0004 seconds
+[EKF.py-1] [INFO] [1745328078.454295994] [EKF_node]: [Timing] inference_callback took 0.0012 seconds
+[EKF.py-1] [INFO] [1745328078.514104465] [EKF_node]: [Timing] depth_image_callback took 0.0059 seconds
+[EKF.py-1] [INFO] [1745328078.523988217] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328078.596882935] [EKF_node]: [Timing] depth_image_callback took 0.0059 seconds
+[EKF.py-1] [INFO] [1745328078.644550175] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328078.685948671] [EKF_node]: [Timing] depth_image_callback took 0.0066 seconds
+[EKF.py-1] [INFO] [1745328078.717462390] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328078.772618190] [EKF_node]: [Timing] depth_image_callback took 0.0059 seconds
+[EKF.py-1] [INFO] [1745328078.809474597] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328078.859351971] [EKF_node]: [Timing] depth_image_callback took 0.0062 seconds
+[EKF.py-1] [INFO] [1745328078.876564668] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328078.942529438] [EKF_node]: [Timing] depth_image_callback took 0.0065 seconds
+[EKF.py-1] [INFO] [1745328078.959117841] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328079.039379338] [EKF_node]: [Timing] depth_image_callback took 0.0055 seconds
+[EKF.py-1] [INFO] [1745328079.054217132] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328079.112455051] [EKF_node]: [Timing] depth_image_callback took 0.0061 seconds
+[EKF.py-1] [INFO] [1745328079.148725088] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[EKF.py-1] [INFO] [1745328079.149269101] [EKF_node]: [Timing] publish_3d_marker took 0.0003 seconds
+[EKF.py-1] [INFO] [1745328079.149429229] [EKF_node]: [Timing] inference_callback took 0.0010 seconds
+[EKF.py-1] [INFO] [1745328079.201496040] [EKF_node]: [Timing] depth_image_callback took 0.0067 seconds
+[EKF.py-1] [INFO] [1745328079.238084713] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328079.272838543] [EKF_node]: [Timing] depth_image_callback took 0.0064 seconds
+[EKF.py-1] [INFO] [1745328079.312679672] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328079.379046839] [EKF_node]: [Timing] depth_image_callback took 0.0068 seconds
+[EKF.py-1] [INFO] [1745328079.409332472] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328079.473241423] [EKF_node]: [Timing] depth_image_callback took 0.0076 seconds
+[EKF.py-1] [INFO] [1745328079.486258916] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328079.553285912] [EKF_node]: [Timing] depth_image_callback took 0.0093 seconds
+[EKF.py-1] [INFO] [1745328079.586236333] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328079.644912165] [EKF_node]: [Timing] depth_image_callback took 0.0074 seconds
+[EKF.py-1] [INFO] [1745328079.676421968] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328079.745029620] [EKF_node]: [Timing] depth_image_callback took 0.0058 seconds
+[EKF.py-1] [INFO] [1745328079.768531492] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[EKF.py-1] [INFO] [1745328079.769058061] [EKF_node]: [Timing] publish_3d_marker took 0.0003 seconds
+[EKF.py-1] [INFO] [1745328079.769209002] [EKF_node]: [Timing] inference_callback took 0.0009 seconds
+[EKF.py-1] [INFO] [1745328079.821559021] [EKF_node]: [Timing] depth_image_callback took 0.0071 seconds
+[EKF.py-1] [INFO] [1745328079.875594370] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[EKF.py-1] [INFO] [1745328079.876240994] [EKF_node]: [Timing] publish_3d_marker took 0.0004 seconds
+[EKF.py-1] [INFO] [1745328079.876427990] [EKF_node]: [Timing] inference_callback took 0.0011 seconds
+[EKF.py-1] [INFO] [1745328079.934889319] [EKF_node]: [Timing] depth_image_callback took 0.0076 seconds
+[EKF.py-1] [INFO] [1745328079.964479176] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0002 seconds
+[EKF.py-1] [INFO] [1745328079.965420571] [EKF_node]: [Timing] publish_3d_marker took 0.0005 seconds
+[EKF.py-1] [INFO] [1745328079.965812935] [EKF_node]: [Timing] inference_callback took 0.0017 seconds
+[EKF.py-1] [INFO] [1745328080.053079362] [EKF_node]: [Timing] depth_image_callback took 0.0064 seconds
+[EKF.py-1] [INFO] [1745328080.117893551] [EKF_node]: [Timing] depth_image_callback took 0.0094 seconds
+[EKF.py-1] [INFO] [1745328080.152953304] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328080.224320469] [EKF_node]: [Timing] depth_image_callback took 0.0066 seconds
+[EKF.py-1] [INFO] [1745328080.258369683] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328080.317595783] [EKF_node]: [Timing] depth_image_callback took 0.0081 seconds
+[EKF.py-1] [INFO] [1745328080.349092929] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[EKF.py-1] [INFO] [1745328080.349728888] [EKF_node]: [Timing] publish_3d_marker took 0.0004 seconds
+[EKF.py-1] [INFO] [1745328080.349912785] [EKF_node]: [Timing] inference_callback took 0.0011 seconds
+[EKF.py-1] [INFO] [1745328080.408152861] [EKF_node]: [Timing] depth_image_callback took 0.0069 seconds
+[EKF.py-1] [INFO] [1745328080.443368794] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328080.496811360] [EKF_node]: [Timing] depth_image_callback took 0.0073 seconds
+[EKF.py-1] [INFO] [1745328080.539663162] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328080.575229757] [EKF_node]: [Timing] depth_image_callback took 0.0059 seconds
+[EKF.py-1] [INFO] [1745328080.648749238] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[EKF.py-1] [INFO] [1745328080.649338147] [EKF_node]: [Timing] publish_3d_marker took 0.0003 seconds
+[EKF.py-1] [INFO] [1745328080.649492407] [EKF_node]: [Timing] inference_callback took 0.0010 seconds
+[EKF.py-1] [INFO] [1745328080.676907218] [EKF_node]: [Timing] depth_image_callback took 0.0065 seconds
+[EKF.py-1] [INFO] [1745328080.723981041] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328080.782731848] [EKF_node]: [Timing] depth_image_callback took 0.0068 seconds
+[EKF.py-1] [INFO] [1745328080.791537287] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328080.868270342] [EKF_node]: [Timing] depth_image_callback took 0.0074 seconds
+[EKF.py-1] [INFO] [1745328080.899806314] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328080.966035628] [EKF_node]: [Timing] depth_image_callback took 0.0052 seconds
+[EKF.py-1] [INFO] [1745328080.981449153] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328081.052577478] [EKF_node]: [Timing] depth_image_callback took 0.0084 seconds
+[EKF.py-1] [INFO] [1745328081.091562120] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328081.142512584] [EKF_node]: [Timing] depth_image_callback took 0.0063 seconds
+[EKF.py-1] [INFO] [1745328081.184935153] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328081.234800485] [EKF_node]: [Timing] depth_image_callback took 0.0072 seconds
+[EKF.py-1] [INFO] [1745328081.270231186] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[EKF.py-1] [INFO] [1745328081.270824519] [EKF_node]: [Timing] publish_3d_marker took 0.0003 seconds
+[EKF.py-1] [INFO] [1745328081.271005060] [EKF_node]: [Timing] inference_callback took 0.0010 seconds
+[EKF.py-1] [INFO] [1745328081.321964484] [EKF_node]: [Timing] depth_image_callback took 0.0071 seconds
+[EKF.py-1] [INFO] [1745328081.350579129] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328081.414376482] [EKF_node]: [Timing] depth_image_callback took 0.0078 seconds
+[EKF.py-1] [INFO] [1745328081.452917146] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[EKF.py-1] [INFO] [1745328081.453517020] [EKF_node]: [Timing] publish_3d_marker took 0.0004 seconds
+[EKF.py-1] [INFO] [1745328081.453704609] [EKF_node]: [Timing] inference_callback took 0.0010 seconds
+[EKF.py-1] [INFO] [1745328081.521162232] [EKF_node]: [Timing] depth_image_callback took 0.0070 seconds
+[EKF.py-1] [INFO] [1745328081.552272609] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328081.616565746] [EKF_node]: [Timing] depth_image_callback took 0.0075 seconds
+[EKF.py-1] [INFO] [1745328081.653378370] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0002 seconds
+[EKF.py-1] [INFO] [1745328081.654242912] [EKF_node]: [Timing] publish_3d_marker took 0.0004 seconds
+[EKF.py-1] [INFO] [1745328081.654629097] [EKF_node]: [Timing] inference_callback took 0.0016 seconds
+[EKF.py-1] [INFO] [1745328081.716651890] [EKF_node]: [Timing] depth_image_callback took 0.0068 seconds
+[EKF.py-1] [INFO] [1745328081.742247745] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0002 seconds
+[EKF.py-1] [INFO] [1745328081.743146462] [EKF_node]: [Timing] publish_3d_marker took 0.0004 seconds
+[EKF.py-1] [INFO] [1745328081.743539059] [EKF_node]: [Timing] inference_callback took 0.0016 seconds
+[EKF.py-1] [INFO] [1745328081.797591841] [EKF_node]: [Timing] depth_image_callback took 0.0069 seconds
+[EKF.py-1] [INFO] [1745328081.838434023] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[EKF.py-1] [INFO] [1745328081.839047912] [EKF_node]: [Timing] publish_3d_marker took 0.0004 seconds
+[EKF.py-1] [INFO] [1745328081.839237069] [EKF_node]: [Timing] inference_callback took 0.0011 seconds
+[EKF.py-1] [INFO] [1745328081.899413682] [EKF_node]: [Timing] depth_image_callback took 0.0081 seconds
+[EKF.py-1] [INFO] [1745328081.924833432] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328081.979388549] [EKF_node]: [Timing] depth_image_callback took 0.0066 seconds
+[EKF.py-1] [INFO] [1745328082.015151911] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0002 seconds
+[EKF.py-1] [INFO] [1745328082.016107176] [EKF_node]: [Timing] publish_3d_marker took 0.0005 seconds
+[EKF.py-1] [INFO] [1745328082.016568140] [EKF_node]: [Timing] inference_callback took 0.0018 seconds
+[EKF.py-1] [INFO] [1745328082.073795181] [EKF_node]: [Timing] depth_image_callback took 0.0072 seconds
+[EKF.py-1] [INFO] [1745328082.101921790] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328082.160118623] [EKF_node]: [Timing] depth_image_callback took 0.0080 seconds
+[EKF.py-1] [INFO] [1745328082.189624061] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[EKF.py-1] [INFO] [1745328082.190269815] [EKF_node]: [Timing] publish_3d_marker took 0.0004 seconds
+[EKF.py-1] [INFO] [1745328082.190455889] [EKF_node]: [Timing] inference_callback took 0.0011 seconds
+[EKF.py-1] [INFO] [1745328082.247787940] [EKF_node]: [Timing] depth_image_callback took 0.0071 seconds
+[EKF.py-1] [INFO] [1745328082.264307658] [EKF_node]: [Timing] apply_cumulative_hist_depth_filter took 0.0001 seconds
+[EKF.py-1] [INFO] [1745328082.264898391] [EKF_node]: [Timing] publish_3d_marker took 0.0004 seconds
+[EKF.py-1] [INFO] [1745328082.265078814] [EKF_node]: [Timing] inference_callback took 0.0010 seconds
+[EKF.py-1] [INFO] [1745328082.352575586] [EKF_node]: [Timing] depth_image_callback took 0.0075 seconds
+[EKF.py-1] [INFO] [1745328082.383151651] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328082.427384546] [EKF_node]: [Timing] depth_image_callback took 0.0063 seconds
+[EKF.py-1] [INFO] [1745328082.461499676] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328082.519854653] [EKF_node]: [Timing] depth_image_callback took 0.0056 seconds
+[EKF.py-1] [INFO] [1745328082.561313062] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+[EKF.py-1] [INFO] [1745328082.621000329] [EKF_node]: [Timing] depth_image_callback took 0.0081 seconds
+[EKF.py-1] [INFO] [1745328082.653215723] [EKF_node]: [Timing] inference_callback took 0.0000 seconds
+
+
+///
+
+lback took 0.0000 seconds
+[MFE_pose.py-1] [INFO] [1745330761.309692100] [MFE_pose]: [Timing] depth_image_callback took 0.0020 seconds
+[MFE_pose.py-1] [INFO] [1745330761.310345588] [MFE_pose]: [Timing] inference_callback took 0.0000 seconds
+[MFE_pose.py-1] [INFO] [1745330761.320401934] [MFE_pose]: [Timing] depth_image_callback took 0.0026 seconds
+[MFE_pose.py-1] [INFO] [1745330761.321137776] [MFE_pose]: [Timing] inference_callback took 0.0000 seconds
+[MFE_pose.py-1] [INFO] [1745330761.329420298] [MFE_pose]: [Timing] depth_image_callback took 0.0025 seconds
+[MFE_pose.py-1] [INFO] [1745330761.330022024] [MFE_pose]: [Timing] inference_callback took 0.0000 seconds
+[MFE_pose.py-1] [INFO] [1745330761.339115818] [MFE_pose]: [Timing] depth_image_callback took 0.0025 seconds
+[MFE_pose.py-1] [INFO] [1745330761.339777667] [MFE_pose]: [Timing] inference_callback took 0.0000 seconds
+[MFE_pose.py-1] [INFO] [1745330761.347352951] [MFE_pose]: [Timing] depth_image_callback took 0.0025 seconds
+[MFE_pose.py-1] [INFO] [1745330761.348055946] [MFE_pose]: [Timing] inference_callback took 0.0000 seconds
+[MFE_pose.py-1] [INFO] [1745330761.359114730] [MFE_pose]: [Timing] depth_image_callback took 0.0024 seconds
+[MFE_pose.py-1] [INFO] [1745330761.360001754] [MFE_pose]: [Timing] inference_callback took 0.0000 seconds
+[MFE_pose.py-1] [INFO] [1745330761.369074350] [MFE_pose]: [Timing] depth_image_callback took 0.0021 seconds
+[MFE_pose.py-1] [INFO] [1745330761.369660805] [MFE_pose]: [Timing] inference_callback took 0.0000 seconds
+[MFE_pose.py-1] [INFO] [1745330761.379165949] [MFE_pose]: [Timing] depth_image_callback took 0.0024 seconds
+[MFE_pose.py-1] [INFO] [1745330761.379890681] [MFE_pose]: [Timing] inference_callback took 0.0000 seconds
+[MFE_pose.py-1] [INFO] [1745330761.388376595] [MFE_pose]: [Timing] inference_callback took 0.0000 seconds
+[MFE_pose.py-1] [INFO] [1745330761.398893445] [MFE_pose]: [Timing] depth_image_callback took 0.0021 seconds
+[MFE_pose.py-1] [INFO] [1745330761.431235429] [MFE_pose]: [Timing] inference_callback took 0.0000 seconds
+[MFE_pose.py-1] [INFO] [1745330761.484322248] [MFE_pose]: [Timing] depth_image_callback took 0.0026 seconds
+[MFE_pose.py-1] [INFO] [1745330761.542997758] [MFE_pose]: [Timing] inference_callback took 0.0000 seconds
+[MFE_pose.py-1] [INFO] [1745330761.574526833] [MFE_pose]: [Timing] depth_image_callback took 0.0021 seconds
+[MFE_pose.py-1] [INFO] [1745330761.616349461] [MFE_pose]: [Timing] inference_callback took 0.0000 seconds
+[MFE_pose.py-1] [INFO] [1745330761.673615756] [MFE_pose]: [Timing] depth_image_callback took 0.0020 seconds
+[MFE_pose.py-1] [INFO] [1745330761.703218358] [MFE_pose]: [Timing] inference_callback took 0.0000 seconds
+[MFE_pose.py-1] [INFO] [1745330761.751698418] [MFE_pose]: [Timing] depth_image_callback took 0.0023 seconds
+[MFE_pose.py-1] [INFO] [1745330761.915705682] [MFE_pose]: [Timing] apply_cumulative_hist_depth_filter took 0.1049 seconds
+[MFE_pose.py-1] [INFO] [1745330788.898015493] [MFE_pose]: [Timing] estimate_manhattan_frame took 26.9818 seconds
+[MFE_pose.py-1] [INFO] [1745330788.905330108] [MFE_pose]: [Timing] publish_3d_marker took 0.0068 seconds
+[MFE_pose.py-1] [INFO] [1745330788.905661980] [MFE_pose]: [Timing] inference_callback took 27.0950 seconds
+[MFE_pose.py-1] [INFO] [1745330788.913639530] [MFE_pose]: [Timing] depth_image_callback took 0.0056 seconds
+[MFE_pose.py-1] [INFO] [1745330789.053670201] [MFE_pose]: [Timing] apply_cumulative_hist_depth_filter took 0.1392 seconds
+
